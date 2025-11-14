@@ -71,11 +71,22 @@ jobs:
           git commit -m "自动更新配置文件 [$(date '+%Y-%m-%d %H:%M:%S')]"
           git push
       
+      - name: 生成Tag名称
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: tag_name
+        run: |
+          # 使用日期和时间生成tag名称（格式：v20241114.081333）
+          DATE_STR=$(date +%Y%m%d)
+          TIME_STR=$(date +%H%M%S)
+          TAG_NAME="v${DATE_STR}.${TIME_STR}"
+          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "Tag名称: ${TAG_NAME}"
+      
       - name: 创建Release
         if: steps.check_changes.outputs.has_changes == 'true'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "v$(date +%Y%m%d-%H%M%S)"
+          tag_name: ${{ steps.tag_name.outputs.tag_name }}
           name: "自动更新 - $(date '+%Y-%m-%d %H:%M:%S')"
           body: |
             ## 📦 订阅配置更新
@@ -94,6 +105,7 @@ jobs:
           files: clash-config.yaml
           draft: false
           prerelease: false
+          generate_release_notes: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
