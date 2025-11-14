@@ -60,11 +60,16 @@ def parse_proxy_url(proxy_url):
                             for param in params:
                                 if '=' in param:
                                     key, value = param.split('=', 1)
+                                    from urllib.parse import unquote
+                                    value = unquote(value)
+                                    
                                     if key == 'type':
                                         node['network'] = value
                                     elif key == 'security':
                                         if value == 'tls' or value == 'reality':
                                             node['tls'] = True
+                                            if value == 'reality':
+                                                node['type'] = 'vless'  # Reality是VLESS的变体
                                     elif key == 'sni':
                                         node['servername'] = value
                                     elif key == 'host':
@@ -77,6 +82,17 @@ def parse_proxy_url(proxy_url):
                                         if 'ws-opts' not in node:
                                             node['ws-opts'] = {}
                                         node['ws-opts']['path'] = value
+                                    # Reality 参数
+                                    elif key == 'pbk' or key == 'public-key':
+                                        if 'reality-opts' not in node:
+                                            node['reality-opts'] = {}
+                                        node['reality-opts']['public-key'] = value
+                                    elif key == 'sid' or key == 'short-id':
+                                        if 'reality-opts' not in node:
+                                            node['reality-opts'] = {}
+                                        node['reality-opts']['short-id'] = value
+                                    elif key == 'fp' or key == 'client-fingerprint':
+                                        node['client-fingerprint'] = value
         except Exception as e:
             pass
     
