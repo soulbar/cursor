@@ -30,10 +30,57 @@ def decode_base64(content):
         return None
 
 def parse_proxy_url(proxy_url):
-    """解析代理URL（ss://, vmess://, trojan://等）"""
+    """解析代理URL（ss://, vmess://, trojan://, vless://等）"""
     node = {}
     
-    if proxy_url.startswith('ss://'):
+    if proxy_url.startswith('vless://'):
+        # VLESS格式: vless://uuid@server:port?params#name
+        try:
+            parts = proxy_url[8:].split('#')
+            name = parts[1] if len(parts) > 1 else ''
+            
+            main_part = parts[0].split('?')
+            if len(main_part) >= 1:
+                server_part = main_part[0].split('@')
+                if len(server_part) == 2:
+                    uuid = server_part[0]
+                    server_port = server_part[1].split(':')
+                    if len(server_port) == 2:
+                        node = {
+                            'name': name or f"VLESS-{server_port[0]}:{server_port[1]}",
+                            'type': 'vless',
+                            'server': server_port[0],
+                            'port': int(server_port[1]),
+                            'uuid': uuid,
+                            'tls': False
+                        }
+                        # 解析参数
+                        if len(main_part) > 1:
+                            params = main_part[1].split('&')
+                            for param in params:
+                                if '=' in param:
+                                    key, value = param.split('=', 1)
+                                    if key == 'type':
+                                        node['network'] = value
+                                    elif key == 'security':
+                                        if value == 'tls' or value == 'reality':
+                                            node['tls'] = True
+                                    elif key == 'sni':
+                                        node['servername'] = value
+                                    elif key == 'host':
+                                        if 'ws-opts' not in node:
+                                            node['ws-opts'] = {}
+                                        if 'headers' not in node['ws-opts']:
+                                            node['ws-opts']['headers'] = {}
+                                        node['ws-opts']['headers']['Host'] = value
+                                    elif key == 'path':
+                                        if 'ws-opts' not in node:
+                                            node['ws-opts'] = {}
+                                        node['ws-opts']['path'] = value
+        except Exception as e:
+            pass
+    
+    elif proxy_url.startswith('ss://'):
         # SS格式: ss://base64(method:password)@server:port#name
         try:
             parts = proxy_url[5:].split('#')
@@ -133,6 +180,7 @@ def fetch_subscription(url, timeout=30):
         }
         
         # 先尝试普通requests（禁用SSL验证）
+        response = None
         try:
             response = requests.get(
                 url, 
@@ -161,16 +209,34 @@ def fetch_subscription(url, timeout=30):
                 )
                 response.raise_for_status()
             except Exception as e2:
-                raise e2
+                print(f"  ⚠️  请求失败: {str(e2)[:100]}")
+                return None
+        
+        if not response:
+            return None
         
         content = response.text.strip()
+        content_type = response.headers.get('Content-Type', '').lower()
+        
+        # 尝试解析为JSON格式（Clash配置）
+        if 'json' in content_type or content.startswith('{'):
+            try:
+                config = json.loads(content)
+                if isinstance(config, dict) and 'proxies' in config:
+                    nodes = config['proxies']
+                    print(f"  ✓ 解析为JSON格式，找到 {len(nodes)} 个节点")
+                    return nodes
+            except Exception as e:
+                pass
         
         # 尝试解析为YAML格式（Clash配置）
         try:
             config = yaml.safe_load(content)
             if isinstance(config, dict) and 'proxies' in config:
-                return config['proxies']
-        except:
+                nodes = config['proxies']
+                print(f"  ✓ 解析为YAML格式，找到 {len(nodes)} 个节点")
+                return nodes
+        except Exception as e:
             pass
         
         # 尝试解析为Base64编码的代理列表
@@ -186,6 +252,7 @@ def fetch_subscription(url, timeout=30):
                     if node:
                         nodes.append(node)
             if nodes:
+                print(f"  ✓ 解析为Base64编码格式，找到 {len(nodes)} 个节点")
                 return nodes
         
         # 尝试直接解析为代理列表（每行一个）
@@ -199,41 +266,70 @@ def fetch_subscription(url, timeout=30):
                 if node:
                     nodes.append(node)
         
-        return nodes if nodes else None
+        if nodes:
+            print(f"  ✓ 解析为纯文本格式，找到 {len(nodes)} 个节点")
+            return nodes
+        
+        # 如果都没有解析成功，打印内容预览以便调试
+        content_preview = content[:200] if len(content) > 200 else content
+        print(f"  ⚠️  无法解析内容格式，内容预览: {content_preview}...")
+        return None
         
     except Exception as e:
-        print(f"获取订阅链接失败 {url}: {str(e)}")
+        print(f"  ❌ 获取订阅链接失败: {str(e)[:200]}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def fetch_all_subscriptions(urls):
     """获取所有订阅链接的节点"""
     all_nodes = []
     seen_names = set()
+    seen_identifiers = set()  # 用于去重：server:port:type:uuid的组合
     
-    for url in urls:
-        print(f"正在获取订阅: {url}")
+    for i, url in enumerate(urls, 1):
+        print(f"\n[{i}/{len(urls)}] 正在获取订阅: {url}")
         nodes = fetch_subscription(url)
-        if nodes:
+        if nodes and len(nodes) > 0:
+            added_count = 0
             for node in nodes:
-                # 去重（基于节点名称）
+                # 生成唯一标识符用于去重（基于server、port、type、uuid等）
+                server = node.get('server', '')
+                port = node.get('port', 0)
+                node_type = node.get('type', '')
+                uuid = node.get('uuid', '') or node.get('password', '')  # UUID或密码作为标识
+                identifier = f"{node_type}:{server}:{port}:{uuid}"
+                
+                # 去重（基于唯一标识符和节点名称）
                 node_name = node.get('name', '')
-                if node_name and node_name not in seen_names:
-                    seen_names.add(node_name)
+                if identifier not in seen_identifiers:
+                    seen_identifiers.add(identifier)
+                    
+                    # 如果名称已存在，添加来源标记
+                    if node_name in seen_names:
+                        node['name'] = f"{node_name} ({i})"
+                    
+                    if node_name:
+                        seen_names.add(node.get('name', ''))
+                    
                     all_nodes.append(node)
+                    added_count += 1
                 elif not node_name:
                     # 如果没有名称，尝试生成唯一名称
-                    server = node.get('server', 'unknown')
-                    port = node.get('port', 0)
-                    unique_name = f"{node.get('type', 'proxy')}-{server}-{port}"
+                    unique_name = f"{node_type}-{server}-{port}"
                     if unique_name not in seen_names:
                         seen_names.add(unique_name)
                         node['name'] = unique_name
                         all_nodes.append(node)
-            print(f"  获取到 {len(nodes)} 个节点")
+                        added_count += 1
+            
+            print(f"  ✓ 从该订阅添加了 {added_count} 个节点（去重后）")
         else:
-            print(f"  未获取到节点")
+            print(f"  ✗ 未获取到节点")
     
-    print(f"\n总共获取到 {len(all_nodes)} 个唯一节点")
+    print(f"\n{'='*60}")
+    print(f"总共获取到 {len(all_nodes)} 个唯一节点")
+    print(f"{'='*60}")
     return all_nodes
 
 if __name__ == "__main__":
