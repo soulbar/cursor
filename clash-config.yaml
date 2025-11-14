@@ -24,32 +24,9 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: '💦 9 - VLESS - IPv4 : 8443'
-  type: vless
-  server: 172.66.44.179
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFRee.pAgEs.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoic2h1T0R6YzlORWszUG5FVSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 1.73
 - name: '💦 27 - VLESS - IPv4 : 2087'
   type: vless
-  server: 172.66.44.179
+  server: 172.66.47.77
   port: 2087
   ip-version: ipv4-prefer
   tfo: false
@@ -57,22 +34,22 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bfReE.PAgEs.dEv
+  servername: bfReE.paGeS.Dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiRXFFSTRNOUZjWUhqIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiSUxJMFozQ3dIUW5xYUdRIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 1.78
+  latency: 1.44
 - name: '💦 22 - VLESS - IPv4 : 2083'
   type: vless
-  server: 172.66.47.77
+  server: 172.66.44.179
   port: 2083
   ip-version: ipv4-prefer
   tfo: false
@@ -80,44 +57,157 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFRee.Pages.dEV
+  servername: bFReE.paGEs.dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiS2pManBOMHNFUSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiNjdhQmgyOGswVEpnSyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 1.87
-- name: '💦 34 - VLESS - IPv4 : 2096'
-  type: vless
-  server: 172.66.47.77
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEe.pAgES.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiNjY1S1NXbEtsTGJqTWVVIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 1.94
+  latency: 1.59
 - name: '💦 10 - VLESS - IPv4 : 8443'
   type: vless
+  server: 172.66.44.179
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFree.PaGEs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVGlPNjk2amcwWjZ0SUEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.66
+- name: '💦 33 - VLESS - IPv4 : 2096'
+  type: vless
+  server: 172.66.47.77
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfrEE.PagEs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicERWd0NUZGlJY1pYVkg3YiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.67
+- name: '💦 21 - Trojan - IPv4 : 2083'
+  type: trojan
+  server: 172.66.47.77
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BfrEe.pagEs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUTJ6dU9CaGYwbEJrZWc5OCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.8
+- name: '💦 3 - VLESS - IPv4 : 443'
+  type: vless
+  server: 172.66.47.77
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFREE.pAGes.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWERUSkJDU2habVQwWEwiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.83
+- name: '💦 9 - Trojan - IPv4 : 8443'
+  type: trojan
+  server: 172.66.47.77
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BFrEe.PaGes.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiME1HTjJkcndwYU51RCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.88
+- name: '💦 15 - VLESS - IPv4 : 2053'
+  type: vless
+  server: 172.66.47.77
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BFrEe.pAGeS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQTcwQmp1aE9HMk9nWDkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 1.9
+- name: '💦 9 - VLESS - IPv4 : 8443'
+  type: vless
   server: 172.66.47.77
   port: 8443
   ip-version: ipv4-prefer
@@ -126,113 +216,66 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFRee.pAgES.DEv
+  servername: bfrEE.PagEs.dEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiUVJXNXZxVjVyck8iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiaENRa3BGWENvN3A4cnhkWCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.14
-- name: '💦 1 - VLESS - Domain : 443'
-  type: vless
-  server: bfree.pages.dev
-  port: 443
+  latency: 1.98
+- name: '💦 16 - Trojan - IPv4 : 2053'
+  type: trojan
+  server: 172.66.44.179
+  port: 2053
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
+  password: soul
   tls: true
-  servername: bfreE.PAGes.dEV
+  sni: BfREE.pAGeS.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiSDVOblJ0SXkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiVGIyNjFVR1pyUWFCY1Z4UyIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.3
-- name: '💦 33 - Trojan - IPv4 : 2096'
+  latency: 1.98
+- name: '💦 31 - Trojan - Domain : 2096'
   type: trojan
-  server: 172.66.44.179
+  server: bfree.pages.dev
   port: 2096
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: BfReE.paGeS.deV
+  sni: BFreE.PAGeS.dEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiTFBhRFE1bXdYQ04iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiUVBCVnBhMloiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.37
-- name: '💦 28 - VLESS - IPv4 : 2087'
-  type: vless
-  server: 172.66.47.77
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: Bfree.pAGes.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiWVYzc3A0WWVxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 2.45
-- name: '💦 25 - VLESS - Domain : 2087'
-  type: vless
-  server: bfree.pages.dev
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bFReE.paGeS.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUm1tNWk0dXlNIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 2.47
+  latency: 2.03
 - name: '💦 4 - VLESS - IPv4 : 443'
   type: vless
-  server: 172.66.47.77
+  server: 172.66.44.179
   port: 443
   ip-version: ipv4-prefer
   tfo: false
@@ -240,86 +283,42 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BfrEe.PAGeS.DEV
+  servername: bfRee.PaGes.dEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiRXY2elZTUGtCbWdKNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiNHMzRTNta0hQOEIyU085aiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.48
-- name: '💦 13 - VLESS - Domain : 2053'
+  latency: 2.05
+- name: '💦 28 - VLESS - IPv4 : 2087'
   type: vless
-  server: bfree.pages.dev
-  port: 2053
+  server: 172.66.44.179
+  port: 2087
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BFree.PAgeS.DEV
+  servername: BFREE.pageS.dEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoieWdLNG5zUVkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiQVgzMVRiRmFDIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.61
-- name: '💦 15 - Trojan - IPv4 : 2053'
-  type: trojan
-  server: 172.66.44.179
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFree.PaGEs.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiejUyczhlcUZpWHdzZnNrIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 2.65
-- name: '💦 10 - Trojan - IPv4 : 8443'
-  type: trojan
-  server: 172.66.47.77
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfrEe.paGeS.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVDhneHdjb0xpUyIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 2.74
+  latency: 2.05
 - name: '💦 7 - VLESS - Domain : 8443'
   type: vless
   server: bfree.pages.dev
@@ -330,67 +329,44 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BFRee.paGEs.DEV
+  servername: BfREE.Pages.dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiMTdYRVZmT2xOVzkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiTzNYZzhrT2kwNkZJZiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.77
-- name: '💦 31 - VLESS - Domain : 2096'
-  type: vless
-  server: bfree.pages.dev
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfReE.pagES.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieWxlTHJueUs2UjdtYzQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 2.78
-- name: '💦 3 - Trojan - IPv4 : 443'
+  latency: 2.14
+- name: '💦 34 - Trojan - IPv4 : 2096'
   type: trojan
   server: 172.66.44.179
-  port: 443
+  port: 2096
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: BfREe.pagEs.dEv
+  sni: bFrEe.PAGeS.DEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiNnhKWThYNkEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoickNvbjkyblh5RCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 2.85
+  latency: 2.15
 - name: '💦 21 - VLESS - IPv4 : 2083'
   type: vless
-  server: 172.66.44.179
+  server: 172.66.47.77
   port: 2083
   ip-version: ipv4-prefer
   tfo: false
@@ -398,88 +374,87 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bfrEE.PAgEs.dEv
+  servername: BfReE.pAGES.Dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiQ1kxempQcUJPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiWVpGNUxsN2xldDhJTXlUIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.02
-- name: '💦 33 - VLESS - IPv4 : 2096'
+  latency: 2.17
+- name: '💦 16 - VLESS - IPv4 : 2053'
   type: vless
   server: 172.66.44.179
-  port: 2096
+  port: 2053
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFRee.paGEs.DEv
+  servername: bFREe.PAGeS.dEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoicnZXSmdyamwiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiOHZvenBBWXFqSVUxIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.02
-- name: '💦 3 - VLESS - IPv4 : 443'
-  type: vless
-  server: 172.66.44.179
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bfRee.PAgEs.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiaVRuZU9CT0FSQ2dmZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 3.28
-- name: '💦 32 - Trojan - Domain : 2096'
+  latency: 2.19
+- name: '💦 28 - Trojan - IPv4 : 2087'
   type: trojan
-  server: www.speedtest.net
-  port: 2096
+  server: 172.66.44.179
+  port: 2087
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: BfrEe.paGEs.dEV
+  sni: BfREE.pAGEs.Dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYmFDS09rVGsiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiNnpvUmRsUjVZWjkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.39
-- name: '💦 16 - Trojan - IPv4 : 2053'
+  latency: 2.2
+- name: '💦 4 - Trojan - IPv4 : 443'
+  type: trojan
+  server: 172.66.44.179
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfReE.PAgEs.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVkRTRmw3UElUQ0JpWFV1IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.24
+- name: '💦 15 - Trojan - IPv4 : 2053'
   type: trojan
   server: 172.66.47.77
   port: 2053
@@ -488,64 +463,87 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: BFREe.pAGeS.DEV
+  sni: BfreE.pAGeS.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiY1JaNTgxYTlPSVdUIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiWTFaUnJ5V01XTSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.5
+  latency: 2.24
 - name: '💦 27 - Trojan - IPv4 : 2087'
   type: trojan
+  server: 172.66.47.77
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfRee.PaGeS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWldTcXExU2wiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.28
+- name: '💦 34 - VLESS - IPv4 : 2096'
+  type: vless
   server: 172.66.44.179
-  port: 2087
+  port: 2096
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  password: soul
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
   tls: true
-  sni: BfreE.PAgEs.dEV
+  servername: BfrEE.PAgeS.DEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiUXEyMmhBQ1RSUkRDIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiRFpybE5jV1J6N2IiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.5
-- name: '💦 25 - Trojan - Domain : 2087'
+  latency: 2.35
+- name: '💦 33 - Trojan - IPv4 : 2096'
   type: trojan
-  server: bfree.pages.dev
-  port: 2087
+  server: 172.66.47.77
+  port: 2096
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: bfreE.pagES.deV
+  sni: bfREE.PaGES.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoib0oyb1JGVXFKc1YiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiYmhmTzJEOWFqRUhjaVYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.75
-- name: '💦 9 - Trojan - IPv4 : 8443'
+  latency: 2.37
+- name: '💦 10 - Trojan - IPv4 : 8443'
   type: trojan
   server: 172.66.44.179
   port: 8443
@@ -554,41 +552,64 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: bFree.pAgEs.Dev
+  sni: bfRee.pages.dEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiWW1CZFhFRElpOVoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiSWNIQ0E3bVdXIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.77
-- name: '💦 22 - Trojan - IPv4 : 2083'
+  latency: 2.43
+- name: '💦 7 - Trojan - Domain : 8443'
   type: trojan
-  server: 172.66.47.77
-  port: 2083
+  server: bfree.pages.dev
+  port: 8443
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: BFREE.PageS.deV
+  sni: bFREE.pAGES.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiTGpoWWU4Rmo3aCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoidUpMTHV3dDFjR0wwViIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.8
+  latency: 2.47
+- name: '💦 1 - VLESS - Domain : 443'
+  type: vless
+  server: bfree.pages.dev
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfREE.pagES.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicWNlUm1hZzBYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.54
 - name: '💦 19 - VLESS - Domain : 2083'
   type: vless
   server: bfree.pages.dev
@@ -599,110 +620,22 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFRee.PagES.deV
+  servername: BfrEe.pAgES.DEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiV1dNSzJ2bFUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiVzNnN3pRcElhMiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 3.85
-- name: '💦 28 - Trojan - IPv4 : 2087'
-  type: trojan
-  server: 172.66.47.77
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfReE.paGES.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVE0xZ0NtMkRYd2dOIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 3.85
-- name: '💦 34 - Trojan - IPv4 : 2096'
-  type: trojan
-  server: 172.66.47.77
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: Bfree.PAGES.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVFVTcEJQcHprVCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 3.86
-- name: '💦 4 - Trojan - IPv4 : 443'
-  type: trojan
-  server: 172.66.47.77
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFRee.PAges.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiRWYyaTMxTFMyYVgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 3.98
-- name: '💦 7 - Trojan - Domain : 8443'
-  type: trojan
-  server: bfree.pages.dev
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfrEe.PAGes.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVDJXV2c5QWl0UCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 4.01
-- name: '💦 15 - VLESS - IPv4 : 2053'
+  latency: 2.6
+- name: '💦 13 - VLESS - Domain : 2053'
   type: vless
-  server: 172.66.44.179
+  server: bfree.pages.dev
   port: 2053
   ip-version: ipv4-prefer
   tfo: false
@@ -710,174 +643,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BFrEE.pAgES.DeV
+  servername: bFReE.PaGeS.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiM3FEanplTWNNIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoic1VIVTR4VEE0YTkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 4.03
-- name: '💦 16 - VLESS - IPv4 : 2053'
-  type: vless
-  server: 172.66.47.77
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bFRee.pAGes.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZ2FnTUZ5N0ZRa3ciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 4.14
-- name: '💦 31 - Trojan - Domain : 2096'
-  type: trojan
-  server: bfree.pages.dev
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfrEE.pageS.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoia1c4SXdmamlicSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 4.32
-- name: '💦 1 - Trojan - Domain : 443'
-  type: trojan
-  server: bfree.pages.dev
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfRee.PAGEs.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiNkphblN5THZ1IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 4.52
-- name: '💦 21 - Trojan - IPv4 : 2083'
-  type: trojan
-  server: 172.66.44.179
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFree.PAgES.DEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiQUt6V0h4dm0iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 4.64
-- name: '💦 20 - Trojan - Domain : 2083'
-  type: trojan
-  server: www.speedtest.net
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfReE.PAges.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiQ3U5OVBYSEVsZG91cWlPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 5.19
-- name: '💦 14 - Trojan - Domain : 2053'
-  type: trojan
-  server: www.speedtest.net
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfRee.pAgES.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiOTQ0QU5QRGd4TGlEIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 5.21
-- name: '💦 26 - Trojan - Domain : 2087'
-  type: trojan
-  server: www.speedtest.net
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFReE.pagEs.deV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieDJSOTFpUUlmT1UiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 5.3
+  latency: 2.63
 - name: '💦 13 - Trojan - Domain : 2053'
   type: trojan
   server: bfree.pages.dev
@@ -887,19 +665,131 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: bfrEE.paGEs.Dev
+  sni: bFrEe.paGES.dEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiano2UjdMN0tkIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiOVdpeG5CMjFTbCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 5.33
+  latency: 2.8
+- name: '💦 31 - VLESS - Domain : 2096'
+  type: vless
+  server: bfree.pages.dev
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BFRee.paGeS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUWl1WXJpMkdEIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.83
+- name: '💦 25 - Trojan - Domain : 2087'
+  type: trojan
+  server: bfree.pages.dev
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BfRee.pAges.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiaDJsa0JEYzhmZWpRSGNERSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.9
+- name: '💦 3 - Trojan - IPv4 : 443'
+  type: trojan
+  server: 172.66.47.77
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEe.Pages.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiU1pva2tpYlRlcCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.16
+- name: '💦 25 - VLESS - Domain : 2087'
+  type: vless
+  server: bfree.pages.dev
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfreE.paGES.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidER1bDR1Z2RObEcyIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.22
+- name: '💦 1 - Trojan - Domain : 443'
+  type: trojan
+  server: bfree.pages.dev
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEe.PAGEs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUjFLeEhQOGFZemxtZG9EIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.35
 - name: '💦 19 - Trojan - Domain : 2083'
   type: trojan
   server: bfree.pages.dev
@@ -909,19 +799,129 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: BFrEe.pAGeS.Dev
+  sni: BfREE.PagEs.DEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiSWhHY0hzbFZvQiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiRUpsN3h2Y3BNd2d3IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 6.17
+  latency: 3.42
+- name: '💦 22 - Trojan - IPv4 : 2083'
+  type: trojan
+  server: 172.66.44.179
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEE.pagEs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVGxVZ05oam1PIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.76
+- name: '💦 32 - Trojan - Domain : 2096'
+  type: trojan
+  server: www.speedtest.net
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfREe.pagEs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUHlJdjNaUkQiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 5.83
+- name: '💦 26 - Trojan - Domain : 2087'
+  type: trojan
+  server: www.speedtest.net
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BFreE.Pages.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRW1yUDFNeGpNIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 6.81
+- name: '💦 20 - Trojan - Domain : 2083'
+  type: trojan
+  server: www.speedtest.net
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEE.Pages.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZktIRnZKV1EyZEMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 7.9
+- name: '💦 14 - Trojan - Domain : 2053'
+  type: trojan
+  server: www.speedtest.net
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BfREe.PaGeS.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZnVXSW4yRkhEZCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 9.44
 - name: '💦 8 - Trojan - Domain : 8443'
   type: trojan
   server: www.speedtest.net
@@ -931,19 +931,41 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: bFREe.PAGeS.DEv
+  sni: bfREe.PAGes.DEV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiUGZla2ZkUlZ1eHJjOGMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiOHVBU2diM2ZNcDZzIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 6.54
+  latency: 10.62
+- name: '💦 2 - Trojan - Domain : 443'
+  type: trojan
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfrEE.paGEs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoicVlmNG1TRlFZWVh3RSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 11.75
 - name: '💦 32 - VLESS - Domain : 2096'
   type: vless
   server: www.speedtest.net
@@ -954,41 +976,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: Bfree.PAgES.DeV
+  servername: bfrEe.PAGes.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiVVlMcW5vVHB3cmYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoickhZTGxJNzlVeFBqSmFaIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 6.94
-- name: '💦 2 - Trojan - Domain : 443'
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfREe.PaGes.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoibEhIRE5Ob3FBT2FxVmMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 7.22
+  latency: 12.23
 - name: '💦 26 - VLESS - Domain : 2087'
   type: vless
   server: www.speedtest.net
@@ -999,19 +999,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bfRee.pAGeS.dEV
+  servername: bfrEe.pagES.DEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiYUZhNkpSQlVDM2k0IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoidFJRR3kzZkZJRGRhMjUzZCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 9.53
+  latency: 13.65
 - name: '💦 20 - VLESS - Domain : 2083'
   type: vless
   server: www.speedtest.net
@@ -1022,19 +1022,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bfReE.PAges.DeV
+  servername: bfREE.pAGeS.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiV2lPSVZyYWpyckYwIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoieTF1N3FGUmJEIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 11.21
+  latency: 14.53
 - name: '💦 14 - VLESS - Domain : 2053'
   type: vless
   server: www.speedtest.net
@@ -1045,42 +1045,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BFREe.PagES.dev
+  servername: bfrEE.pAGES.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiS3VOWmxRYjZoSSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiMU1LaXAxR2UiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 12.42
-- name: '💦 2 - VLESS - Domain : 443'
-  type: vless
-  server: www.speedtest.net
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfRee.pAGES.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiMnppME5oUXluSm1URCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.59
+  latency: 15.69
 - name: '💦 8 - VLESS - Domain : 8443'
   type: vless
   server: www.speedtest.net
@@ -1091,19 +1068,42 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFREE.PaGeS.dEv
+  servername: BFReE.pAGeS.dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiZGZBTTVaTDYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiZnlPclNUTG1ZOXZZRG8iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.72
+  latency: 17.2
+- name: '💦 2 - VLESS - Domain : 443'
+  type: vless
+  server: www.speedtest.net
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BFReE.paGES.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoib3RPc0RnWHNoZTYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 19.05
 - name: solo-US-Railway
   type: vmess
   server: cdns.doon.eu.org
@@ -1118,59 +1118,59 @@ proxies:
       Host: acquisitions-finally-equilibrium-modular.trycloudflare.com
   tls: true
   servername: acquisitions-finally-equilibrium-modular.trycloudflare.com
-  latency: 274.68
+  latency: 326.25
 proxy-groups:
 - name: 🚀 自动选择
   type: url-test
   proxies:
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
-  - '💦 1 - VLESS - Domain : 443'
-  - '💦 33 - Trojan - IPv4 : 2096'
-  - '💦 28 - VLESS - IPv4 : 2087'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 13 - VLESS - Domain : 2053'
-  - '💦 15 - Trojan - IPv4 : 2053'
-  - '💦 10 - Trojan - IPv4 : 8443'
-  - '💦 7 - VLESS - Domain : 8443'
-  - '💦 31 - VLESS - Domain : 2096'
-  - '💦 3 - Trojan - IPv4 : 443'
-  - '💦 21 - VLESS - IPv4 : 2083'
   - '💦 33 - VLESS - IPv4 : 2096'
-  - '💦 3 - VLESS - IPv4 : 443'
-  - '💦 32 - Trojan - Domain : 2096'
-  - '💦 16 - Trojan - IPv4 : 2053'
-  - '💦 27 - Trojan - IPv4 : 2087'
-  - '💦 25 - Trojan - Domain : 2087'
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 22 - Trojan - IPv4 : 2083'
-  - '💦 19 - VLESS - Domain : 2083'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '💦 34 - Trojan - IPv4 : 2096'
-  - '💦 4 - Trojan - IPv4 : 443'
-  - '💦 7 - Trojan - Domain : 8443'
-  - '💦 15 - VLESS - IPv4 : 2053'
-  - '💦 16 - VLESS - IPv4 : 2053'
-  - '💦 31 - Trojan - Domain : 2096'
-  - '💦 1 - Trojan - Domain : 443'
   - '💦 21 - Trojan - IPv4 : 2083'
+  - '💦 3 - VLESS - IPv4 : 443'
+  - '💦 9 - Trojan - IPv4 : 8443'
+  - '💦 15 - VLESS - IPv4 : 2053'
+  - '💦 9 - VLESS - IPv4 : 8443'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 31 - Trojan - Domain : 2096'
+  - '💦 4 - VLESS - IPv4 : 443'
+  - '💦 28 - VLESS - IPv4 : 2087'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '💦 34 - Trojan - IPv4 : 2096'
+  - '💦 21 - VLESS - IPv4 : 2083'
+  - '💦 16 - VLESS - IPv4 : 2053'
+  - '💦 28 - Trojan - IPv4 : 2087'
+  - '💦 4 - Trojan - IPv4 : 443'
+  - '💦 15 - Trojan - IPv4 : 2053'
+  - '💦 27 - Trojan - IPv4 : 2087'
+  - '💦 34 - VLESS - IPv4 : 2096'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 10 - Trojan - IPv4 : 8443'
+  - '💦 7 - Trojan - Domain : 8443'
+  - '💦 1 - VLESS - Domain : 443'
+  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 13 - VLESS - Domain : 2053'
+  - '💦 13 - Trojan - Domain : 2053'
+  - '💦 31 - VLESS - Domain : 2096'
+  - '💦 25 - Trojan - Domain : 2087'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 25 - VLESS - Domain : 2087'
+  - '💦 1 - Trojan - Domain : 443'
+  - '💦 19 - Trojan - Domain : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '💦 32 - Trojan - Domain : 2096'
+  - '💦 26 - Trojan - Domain : 2087'
   - '💦 20 - Trojan - Domain : 2083'
   - '💦 14 - Trojan - Domain : 2053'
-  - '💦 26 - Trojan - Domain : 2087'
-  - '💦 13 - Trojan - Domain : 2053'
-  - '💦 19 - Trojan - Domain : 2083'
   - '💦 8 - Trojan - Domain : 8443'
-  - '💦 32 - VLESS - Domain : 2096'
   - '💦 2 - Trojan - Domain : 443'
+  - '💦 32 - VLESS - Domain : 2096'
   - '💦 26 - VLESS - Domain : 2087'
   - '💦 20 - VLESS - Domain : 2083'
   - '💦 14 - VLESS - Domain : 2053'
-  - '💦 2 - VLESS - Domain : 443'
   - '💦 8 - VLESS - Domain : 8443'
+  - '💦 2 - VLESS - Domain : 443'
   - solo-US-Railway
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -1179,78 +1179,78 @@ proxy-groups:
   type: select
   proxies:
   - 🚀 自动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
-  - '💦 1 - VLESS - Domain : 443'
-  - '💦 33 - Trojan - IPv4 : 2096'
-  - '💦 28 - VLESS - IPv4 : 2087'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 13 - VLESS - Domain : 2053'
-  - '💦 15 - Trojan - IPv4 : 2053'
-  - '💦 10 - Trojan - IPv4 : 8443'
-  - '💦 7 - VLESS - Domain : 8443'
-  - '💦 31 - VLESS - Domain : 2096'
-  - '💦 3 - Trojan - IPv4 : 443'
-  - '💦 21 - VLESS - IPv4 : 2083'
   - '💦 33 - VLESS - IPv4 : 2096'
-  - '💦 3 - VLESS - IPv4 : 443'
-  - '💦 32 - Trojan - Domain : 2096'
-  - '💦 16 - Trojan - IPv4 : 2053'
-  - '💦 27 - Trojan - IPv4 : 2087'
-  - '💦 25 - Trojan - Domain : 2087'
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 22 - Trojan - IPv4 : 2083'
-  - '💦 19 - VLESS - Domain : 2083'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '💦 34 - Trojan - IPv4 : 2096'
-  - '💦 4 - Trojan - IPv4 : 443'
-  - '💦 7 - Trojan - Domain : 8443'
-  - '💦 15 - VLESS - IPv4 : 2053'
-  - '💦 16 - VLESS - IPv4 : 2053'
-  - '💦 31 - Trojan - Domain : 2096'
-  - '💦 1 - Trojan - Domain : 443'
   - '💦 21 - Trojan - IPv4 : 2083'
+  - '💦 3 - VLESS - IPv4 : 443'
+  - '💦 9 - Trojan - IPv4 : 8443'
+  - '💦 15 - VLESS - IPv4 : 2053'
+  - '💦 9 - VLESS - IPv4 : 8443'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 31 - Trojan - Domain : 2096'
+  - '💦 4 - VLESS - IPv4 : 443'
+  - '💦 28 - VLESS - IPv4 : 2087'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '💦 34 - Trojan - IPv4 : 2096'
+  - '💦 21 - VLESS - IPv4 : 2083'
+  - '💦 16 - VLESS - IPv4 : 2053'
+  - '💦 28 - Trojan - IPv4 : 2087'
+  - '💦 4 - Trojan - IPv4 : 443'
+  - '💦 15 - Trojan - IPv4 : 2053'
+  - '💦 27 - Trojan - IPv4 : 2087'
+  - '💦 34 - VLESS - IPv4 : 2096'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 10 - Trojan - IPv4 : 8443'
+  - '💦 7 - Trojan - Domain : 8443'
+  - '💦 1 - VLESS - Domain : 443'
+  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 13 - VLESS - Domain : 2053'
+  - '💦 13 - Trojan - Domain : 2053'
+  - '💦 31 - VLESS - Domain : 2096'
+  - '💦 25 - Trojan - Domain : 2087'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 25 - VLESS - Domain : 2087'
+  - '💦 1 - Trojan - Domain : 443'
+  - '💦 19 - Trojan - Domain : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '💦 32 - Trojan - Domain : 2096'
+  - '💦 26 - Trojan - Domain : 2087'
   - '💦 20 - Trojan - Domain : 2083'
   - '💦 14 - Trojan - Domain : 2053'
-  - '💦 26 - Trojan - Domain : 2087'
-  - '💦 13 - Trojan - Domain : 2053'
-  - '💦 19 - Trojan - Domain : 2083'
   - '💦 8 - Trojan - Domain : 8443'
-  - '💦 32 - VLESS - Domain : 2096'
   - '💦 2 - Trojan - Domain : 443'
+  - '💦 32 - VLESS - Domain : 2096'
   - '💦 26 - VLESS - Domain : 2087'
   - '💦 20 - VLESS - Domain : 2083'
   - '💦 14 - VLESS - Domain : 2053'
-  - '💦 2 - VLESS - Domain : 443'
   - '💦 8 - VLESS - Domain : 8443'
+  - '💦 2 - VLESS - Domain : 443'
   - solo-US-Railway
 - name: ⚡ 最快节点
   type: url-test
   proxies:
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
-  - '💦 1 - VLESS - Domain : 443'
-  - '💦 33 - Trojan - IPv4 : 2096'
-  - '💦 28 - VLESS - IPv4 : 2087'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 13 - VLESS - Domain : 2053'
-  - '💦 15 - Trojan - IPv4 : 2053'
-  - '💦 10 - Trojan - IPv4 : 8443'
-  - '💦 7 - VLESS - Domain : 8443'
-  - '💦 31 - VLESS - Domain : 2096'
-  - '💦 3 - Trojan - IPv4 : 443'
-  - '💦 21 - VLESS - IPv4 : 2083'
   - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
   - '💦 3 - VLESS - IPv4 : 443'
-  - '💦 32 - Trojan - Domain : 2096'
+  - '💦 9 - Trojan - IPv4 : 8443'
+  - '💦 15 - VLESS - IPv4 : 2053'
+  - '💦 9 - VLESS - IPv4 : 8443'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 31 - Trojan - Domain : 2096'
+  - '💦 4 - VLESS - IPv4 : 443'
+  - '💦 28 - VLESS - IPv4 : 2087'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '💦 34 - Trojan - IPv4 : 2096'
+  - '💦 21 - VLESS - IPv4 : 2083'
+  - '💦 16 - VLESS - IPv4 : 2053'
+  - '💦 28 - Trojan - IPv4 : 2087'
+  - '💦 4 - Trojan - IPv4 : 443'
+  - '💦 15 - Trojan - IPv4 : 2053'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1260,110 +1260,110 @@ proxy-groups:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: ChatGPT
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Netflix
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Cloudflare
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Google
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Telegram
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Twitter
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Facebook
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: GitHub
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: Microsoft
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - VLESS - IPv4 : 8443'
   - '💦 27 - VLESS - IPv4 : 2087'
   - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 34 - VLESS - IPv4 : 2096'
   - '💦 10 - VLESS - IPv4 : 8443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 21 - Trojan - IPv4 : 2083'
 - name: 🎯 全球直连
   type: select
   proxies:
