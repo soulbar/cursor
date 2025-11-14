@@ -11,9 +11,15 @@ import json
 from urllib.parse import urlparse
 import cloudscraper
 import urllib3
+import ssl
 
 # 禁用SSL警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# 创建不验证证书的SSL上下文
+ssl_context = ssl.create_default_context()
+ssl_context.check_hostname = False
+ssl_context.verify_mode = ssl.CERT_NONE
 
 def decode_base64(content):
     """解码Base64内容"""
@@ -122,15 +128,40 @@ def parse_proxy_url(proxy_url):
 def fetch_subscription(url, timeout=30):
     """获取订阅链接内容"""
     try:
-        # 使用cloudscraper绕过Cloudflare保护
-        session = cloudscraper.create_scraper()
-        
         headers = {
-            'User-Agent': 'ClashForWindows/1.0.0'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         }
         
-        response = session.get(url, headers=headers, timeout=timeout, verify=False)
-        response.raise_for_status()
+        # 先尝试普通requests（禁用SSL验证）
+        try:
+            response = requests.get(
+                url, 
+                headers=headers, 
+                timeout=timeout, 
+                allow_redirects=True,
+                verify=False
+            )
+            response.raise_for_status()
+        except Exception as e:
+            # 如果失败，尝试使用cloudscraper
+            try:
+                scraper = cloudscraper.create_scraper(
+                    browser={
+                        'browser': 'chrome',
+                        'platform': 'windows',
+                        'desktop': True
+                    },
+                    verify=False
+                )
+                response = scraper.get(
+                    url, 
+                    headers=headers, 
+                    timeout=timeout, 
+                    allow_redirects=True
+                )
+                response.raise_for_status()
+            except Exception as e2:
+                raise e2
         
         content = response.text.strip()
         
