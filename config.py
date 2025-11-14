@@ -1,7 +1,6 @@
 # 订阅链接配置
 SUBSCRIPTION_URLS = [
     "https://snip.soulbar.ggff.net/sub/204774c0-99c5-4454-bbd8-86775343a538",
-    "https://boy.solobar.dpdns.org/soul/sub",
     "https://bfree.pages.dev/sub/normal/f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace?app=clash",
     "https://solo-production-0eb5.up.railway.app/solo",
     "http://103.99.52.140:2096/sub/india"
