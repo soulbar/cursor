@@ -24,346 +24,28 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
-- name: '💦 9 - Trojan - IPv4 : 8443'
+- name: '💦 22 - Trojan - IPv4 : 2083'
   type: trojan
   server: 172.66.47.77
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFREE.pAGes.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZjRnV2RsME1EIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 13.73
-- name: '💦 4 - VLESS - IPv4 : 443'
-  type: vless
-  server: 172.66.44.179
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfrEE.paGeS.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUzlOZzdEWFEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 13.97
-- name: '💦 28 - Trojan - IPv4 : 2087'
-  type: trojan
-  server: 172.66.44.179
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfReE.pAgES.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUmNWSzc3bHEzRVFvVCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 13.97
-- name: '%E7%94%B5%E4%BF%A1-80-WS'
-  type: vless
-  server: 172.66.1.77
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.0
-- name: '💦 22 - VLESS - IPv4 : 2083'
-  type: vless
-  server: 172.66.44.179
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bfREE.pAGEs.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoid2xOVWNmTmZnOHlwQjBYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.03
-- name: '💦 19 - Trojan - Domain : 2083'
-  type: trojan
-  server: bfree.pages.dev
   port: 2083
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: bFRee.PaGes.dev
+  sni: bFrEE.PAges.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiRlkzOWVMT2Fqd1EiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoicTJJc211a2Y3M2c1RElaIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.03
-- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  type: vless
-  server: 104.17.237.188
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.09
-- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  type: vless
-  server: 104.17.15.5
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.11
-- name: '💦 1 - Trojan - Domain : 443'
-  type: trojan
-  server: bfree.pages.dev
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BFrEE.PagEs.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoicXNGNVNqdUxnSTBQQTRDNSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.12
-- name: '💦 3 - Trojan - IPv4 : 443'
-  type: trojan
-  server: 172.66.47.77
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfrEE.PAGEs.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZGk3NzBOS2QyZFFLNDIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.13
-- name: '%E8%81%94%E9%80%9A-443-WS-TLS'
-  type: vless
-  server: 104.16.159.118
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.16
-- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  type: vless
-  server: 104.18.143.111
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.21
-- name: '💦 16 - VLESS - IPv4 : 2053'
-  type: vless
-  server: 172.66.44.179
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bFREE.pageS.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiejJFcXdmTDdtWiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.23
-- name: '💦 34 - Trojan - IPv4 : 2096'
-  type: trojan
-  server: 172.66.44.179
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFrEE.pages.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiS2FkZzFZeW00bFpxZmIwIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.24
-- name: '💦 25 - VLESS - Domain : 2087'
-  type: vless
-  server: bfree.pages.dev
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bfrEE.PaGES.Dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSVRTVU5BUEEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.25
-- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  type: vless
-  server: 104.17.158.86
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.26
-- name: '%E8%81%94%E9%80%9A-80-WS (2)'
-  type: vless
-  server: 104.17.158.86
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.27
-- name: '💦 25 - Trojan - Domain : 2087'
-  type: trojan
-  server: bfree.pages.dev
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFrEe.pAGEs.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiYnVEMHhrN3NZIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.29
+  latency: 1.7
 - name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
   type: vless
   server: 104.21.125.12
@@ -377,94 +59,130 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 14.31
-- name: '💦 10 - Trojan - IPv4 : 8443'
+  latency: 1.96
+- name: '💦 3 - Trojan - IPv4 : 443'
   type: trojan
   server: 172.66.44.179
-  port: 8443
+  port: 443
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   password: soul
   tls: true
-  sni: BFree.pAGEs.DEv
+  sni: BFRee.PAgEs.dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoienluNmRXNzZlOUUyM0giLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiRjU5SzA4ZVRRaSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.31
-- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  type: vless
-  server: 172.67.174.25
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  latency: 1.97
+- name: '💦 33 - Trojan - IPv4 : 2096'
+  type: trojan
+  server: 172.66.44.179
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
   tls: true
-  servername: boy.solobar.dpdns.org
+  sni: bFree.PAges.dEV
   client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
   network: ws
   ws-opts:
+    path: /eyJqdW5rIjoiSkNMSVA3T3l6b2NLaXciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.33
-- name: '💦 21 - VLESS - IPv4 : 2083'
+      Host: bfree.pages.dev
+  latency: 2.0
+- name: '💦 28 - VLESS - IPv4 : 2087'
   type: vless
   server: 172.66.47.77
-  port: 2083
+  port: 2087
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: Bfree.pAGEs.dev
+  servername: BfRee.PageS.DEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoib0Ywa0FiRmsxaTh2SWhWSSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoib25XZ2ZzeTN0dVZwMG1GYyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.33
-- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS'
-  type: vless
-  server: 172.66.1.77
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  latency: 2.01
+- name: '💦 34 - Trojan - IPv4 : 2096'
+  type: trojan
+  server: 172.66.47.77
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
   tls: true
-  servername: boy.solobar.dpdns.org
+  sni: bfrEe.pAgEs.dev
   client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMlJTVlJxZ1ZOZ0lYIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.04
+- name: '%E8%81%94%E9%80%9A-80-WS (2)'
+  type: vless
+  server: 104.17.158.86
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
   network: ws
   ws-opts:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 14.37
-- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  type: vless
-  server: 104.16.62.48
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  latency: 2.05
+- name: '💦 16 - Trojan - IPv4 : 2053'
+  type: trojan
+  server: 172.66.47.77
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
   tls: true
-  servername: boy.solobar.dpdns.org
+  sni: bFREe.pAgeS.dEv
   client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
   network: ws
   ws-opts:
+    path: /eyJqdW5rIjoiNW9UNjZQWnE3VkZlWnJGdiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.4
+      Host: bfree.pages.dev
+  latency: 2.12
 - name: '💦 7 - VLESS - Domain : 8443'
   type: vless
   server: bfree.pages.dev
@@ -475,113 +193,68 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFReE.pagEs.DEv
+  servername: bfrEE.paGeS.Dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiT3FXeVlsMEFYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    path: /eyJqdW5rIjoiN2xjY1QzTkJ1IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.42
-- name: '💦 28 - VLESS - IPv4 : 2087'
+  latency: 2.13
+- name: '%E8%81%94%E9%80%9A-80-WS (2)'
   type: vless
+  server: 104.18.143.111
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.14
+- name: '💦 27 - Trojan - IPv4 : 2087'
+  type: trojan
   server: 172.66.44.179
   port: 2087
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bFReE.PAGES.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidVJpRHE3NGtzWDgwbDZrNiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.42
-- name: '💦 4 - Trojan - IPv4 : 443'
-  type: trojan
-  server: 172.66.44.179
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
   password: soul
   tls: true
-  sni: BfRee.PaGeS.deV
+  sni: BfrEe.Pages.deV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiTVltM01VUWoxdkY4TWMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiS0hmc2NkS2xINUMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 14.45
-- name: '💦 34 - VLESS - IPv4 : 2096'
+  latency: 2.16
+- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
   type: vless
-  server: 172.66.44.179
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfReE.PaGEs.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
+  server: 104.16.62.48
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiQzF3VnAwSEVTIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: bfree.pages.dev
-  latency: 14.46
-- name: '💦 15 - VLESS - IPv4 : 2053'
-  type: vless
-  server: 172.66.47.77
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEe.paGEs.deV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiaUl1M05SSk9JZnEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.51
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.17
 - name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   type: vless
-  server: 104.16.78.71
+  server: 104.18.189.134
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: true
@@ -592,7 +265,200 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 14.54
+  latency: 2.2
+- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  type: vless
+  server: 104.18.43.235
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.2
+- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  type: vless
+  server: 104.21.125.12
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.21
+- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  type: vless
+  server: 104.17.15.5
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.26
+- name: '💦 15 - Trojan - IPv4 : 2053'
+  type: trojan
+  server: 172.66.44.179
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfree.pAGEs.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMXVqdVVEQm5KQk9jSCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.26
+- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  type: vless
+  server: 104.19.239.165
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.28
+- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  type: vless
+  server: 104.18.15.176
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.31
+- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  type: vless
+  server: 104.17.15.5
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.32
+- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  type: vless
+  server: 104.17.158.86
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.33
+- name: '💦 1 - Trojan - Domain : 443'
+  type: trojan
+  server: bfree.pages.dev
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFreE.paGES.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiOVF1SzZhN3hSYSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.33
+- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  type: vless
+  server: 104.18.143.111
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.38
+- name: '💦 31 - VLESS - Domain : 2096'
+  type: vless
+  server: bfree.pages.dev
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfREE.PAges.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibjZIREVKNHBWQnZwcjNPVSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.38
+- name: '💦 14 - Trojan - Domain : 2053'
+  type: trojan
+  server: www.speedtest.net
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEe.pagEs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNGdDYVhDRmE2MVJGVyIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.38
 - name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
   type: vless
   server: 104.18.15.176
@@ -606,485 +472,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 14.56
-- name: '💦 31 - Trojan - Domain : 2096'
-  type: trojan
-  server: bfree.pages.dev
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bFrEe.pAGEs.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoickdZZ094S2owdk8iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.56
-- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  type: vless
-  server: 104.16.62.48
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.57
-- name: '💦 15 - Trojan - IPv4 : 2053'
-  type: trojan
-  server: 172.66.47.77
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BFrEe.pAgeS.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidXNneGJKbXNqYk5LaiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.58
-- name: '%E7%A7%BB%E5%8A%A8-80-WS'
-  type: vless
-  server: 104.17.255.254
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.6
-- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  type: vless
-  server: 104.17.237.188
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.6
-- name: '%E8%81%94%E9%80%9A-80-WS (2)'
-  type: vless
-  server: 104.18.189.134
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.6
-- name: '💦 1 - VLESS - Domain : 443'
-  type: vless
-  server: bfree.pages.dev
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEe.pAges.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSE5iQlFWS0ROd2pQaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.61
-- name: '💦 22 - Trojan - IPv4 : 2083'
-  type: trojan
-  server: 172.66.44.179
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfREe.paGEs.DEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiVVVkU0toUUwiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.66
-- name: '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
-  type: vless
-  server: boy.solobar.dpdns.org
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.7
-- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  type: vless
-  server: 104.17.15.5
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.74
-- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  type: vless
-  server: 104.19.239.165
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.76
-- name: '💦 19 - VLESS - Domain : 2083'
-  type: vless
-  server: bfree.pages.dev
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfREE.pagES.DEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSU0zbkR2SFhjdjYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.76
-- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  type: vless
-  server: 104.18.189.134
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.78
-- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  type: vless
-  server: 104.18.43.235
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.78
-- name: '%E8%81%94%E9%80%9A-80-WS (2)'
-  type: vless
-  server: 104.16.78.71
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 14.81
-- name: '💦 31 - VLESS - Domain : 2096'
-  type: vless
-  server: bfree.pages.dev
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bfrEe.PAgES.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUjlkbndCWTlNIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 14.95
-- name: '%E8%81%94%E9%80%9A-80-WS (2)'
-  type: vless
-  server: 104.18.143.111
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 15.01
-- name: '💦 21 - Trojan - IPv4 : 2083'
-  type: trojan
-  server: 172.66.47.77
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfRee.Pages.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiMHN2VEZ5ZlFPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.06
-- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  type: vless
-  server: 104.21.125.12
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 15.09
-- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  type: vless
-  server: 104.19.239.165
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 15.1
-- name: '💦 33 - Trojan - IPv4 : 2096'
-  type: trojan
-  server: 172.66.47.77
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfReE.pAges.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiUHA1Z0t5YW56SDciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.11
-- name: '💦 27 - Trojan - IPv4 : 2087'
-  type: trojan
-  server: 172.66.47.77
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BfreE.PAgEs.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiYUlLN1RONUYxVkpVMCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.14
-- name: '💦 3 - VLESS - IPv4 : 443'
-  type: vless
-  server: 172.66.47.77
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bfREE.PagEs.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiWDB1Zk1XOTY5WVBQdFNyIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.16
-- name: '💦 16 - Trojan - IPv4 : 2053'
-  type: trojan
-  server: 172.66.44.179
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfrEE.paGes.DEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiZk9zODVWT0JIVUEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.17
-- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  type: vless
-  server: 104.18.43.235
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 15.2
-- name: '💦 33 - VLESS - IPv4 : 2096'
-  type: vless
-  server: 172.66.47.77
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEe.paGeS.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiTFVyMmpra0tOU3piUDR5IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.27
-- name: '💦 27 - VLESS - IPv4 : 2087'
-  type: vless
-  server: 172.66.47.77
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEE.PAgeS.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoidnNKSkN1Z0oiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 15.35
-- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  type: vless
-  server: 104.18.15.176
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 15.37
+  latency: 2.4
 - name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS'
   type: vless
   server: 104.17.255.254
@@ -1098,52 +486,212 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 15.4
-- name: '💦 13 - Trojan - Domain : 2053'
-  type: trojan
-  server: bfree.pages.dev
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: BFrEe.pAGES.deV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
+  latency: 2.42
+- name: '%E7%A7%BB%E5%8A%A8-80-WS'
+  type: vless
+  server: 104.17.255.254
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoia3lURmV0d1NnTVZQQkciLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: bfree.pages.dev
-  latency: 15.43
-- name: '💦 10 - VLESS - IPv4 : 8443'
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.42
+- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
   type: vless
-  server: 172.66.44.179
-  port: 8443
+  server: 104.17.237.188
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.43
+- name: '%E8%81%94%E9%80%9A-80-WS (2)'
+  type: vless
+  server: 104.16.78.71
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.44
+- name: '💦 22 - VLESS - IPv4 : 2083'
+  type: vless
+  server: 172.66.47.77
+  port: 2083
   ip-version: ipv4-prefer
   tfo: false
   udp: false
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: BFrEe.pages.DeV
+  servername: BfReE.paGeS.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiREZROVpSZlYwSSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiQnBkZW5jcTJHS0FkbWhYIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 15.5
+  latency: 2.46
+- name: '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  type: vless
+  server: 104.16.78.71
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.48
+- name: '💦 34 - VLESS - IPv4 : 2096'
+  type: vless
+  server: 172.66.47.77
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bfREe.PagEs.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTEplUGlMWEkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.48
+- name: '💦 9 - Trojan - IPv4 : 8443'
+  type: trojan
+  server: 172.66.44.179
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BFReE.pAGeS.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRWJmdG03UzVqIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.49
+- name: '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  type: vless
+  server: 104.18.43.235
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.51
+- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  type: vless
+  server: 104.16.62.48
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.52
+- name: '%E8%81%94%E9%80%9A-443-WS-TLS'
+  type: vless
+  server: 104.16.159.118
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.52
+- name: '💦 28 - Trojan - IPv4 : 2087'
+  type: trojan
+  server: 172.66.47.77
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BfrEe.pAGes.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMTNMSFAxSk8iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.53
+- name: '💦 25 - VLESS - Domain : 2087'
+  type: vless
+  server: bfree.pages.dev
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bfREE.PageS.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWENrcmVKWHVvNDlXIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.57
 - name: '💦 7 - Trojan - Domain : 8443'
   type: trojan
   server: bfree.pages.dev
@@ -1153,42 +701,67 @@ proxies:
   udp: false
   password: soul
   tls: true
-  sni: Bfree.PAgEs.Dev
+  sni: bfreE.pagES.Dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiU2JuckVEdkZFcCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiWXdBVjZrcGVRaTEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 15.52
-- name: '💦 13 - VLESS - Domain : 2053'
+  latency: 2.57
+- name: '%E7%94%B5%E4%BF%A1-80-WS'
   type: vless
-  server: bfree.pages.dev
-  port: 2053
+  server: 172.66.1.77
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.59
+- name: '💦 2 - Trojan - Domain : 443'
+  type: trojan
+  server: www.speedtest.net
+  port: 443
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
+  password: soul
   tls: true
-  servername: bFree.PageS.DEv
+  sni: bfRee.PAgES.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiM3FZYzRlSVRqTHhmdyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiVG9CaVNHUEdCUlBGIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 15.57
+  latency: 2.6
+- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS'
+  type: vless
+  server: 172.66.1.77
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.62
 - name: '%E8%81%94%E9%80%9A-80-WS'
   type: vless
   server: 104.16.159.118
@@ -1200,8 +773,512 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 15.66
+  latency: 2.65
+- name: '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  type: vless
+  server: 104.19.239.165
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.65
+- name: '💦 4 - Trojan - IPv4 : 443'
+  type: trojan
+  server: 172.66.47.77
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFrEE.pagES.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZ0c4ampTRmpablRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.65
+- name: '💦 20 - Trojan - Domain : 2083'
+  type: trojan
+  server: www.speedtest.net
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFree.paGeS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoibWprb3pEbUVIZ1NKSnVXIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.65
+- name: '💦 31 - Trojan - Domain : 2096'
+  type: trojan
+  server: bfree.pages.dev
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfRee.PaGeS.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiMFlQWFVNSU9HUmZOIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.71
+- name: '💦 3 - VLESS - IPv4 : 443'
+  type: vless
+  server: 172.66.44.179
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFrEe.pagES.dEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZTUwY3ZVTm93aTNlM20xVyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.72
+- name: '💦 33 - VLESS - IPv4 : 2096'
+  type: vless
+  server: 172.66.44.179
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFREe.pAgEs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiSGw2eDZweDJrN2NOanFXIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.73
+- name: '💦 32 - Trojan - Domain : 2096'
+  type: trojan
+  server: www.speedtest.net
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bfREe.pAges.dEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoialR4NVhsYlFSSVEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.74
+- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  type: vless
+  server: 172.67.174.25
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.75
+- name: '💦 21 - VLESS - IPv4 : 2083'
+  type: vless
+  server: 172.66.44.179
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFREe.paGEs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoieGI4c0hUYnFTWlMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.79
+- name: '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
+  type: vless
+  server: boy.solobar.dpdns.org
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.82
+- name: '💦 16 - VLESS - IPv4 : 2053'
+  type: vless
+  server: 172.66.47.77
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfReE.pAgEs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWTg1cTFUYmFjIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.85
+- name: '%E8%81%94%E9%80%9A-80-WS (2)'
+  type: vless
+  server: 104.18.189.134
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.87
+- name: '💦 19 - VLESS - Domain : 2083'
+  type: vless
+  server: bfree.pages.dev
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BFree.PaGES.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTEx3QjBGNmxRM3BiaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.91
+- name: '💦 21 - Trojan - IPv4 : 2083'
+  type: trojan
+  server: 172.66.44.179
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BFREe.PAgeS.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZlBMZ1ZYcll5ck5kYiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.92
+- name: '💦 4 - VLESS - IPv4 : 443'
+  type: vless
+  server: 172.66.47.77
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFREE.Pages.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiamtmVlUyZWEyNlpsNm1tIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.95
+- name: '💦 27 - VLESS - IPv4 : 2087'
+  type: vless
+  server: 172.66.44.179
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bfrEE.paGes.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVzFtNTJudUNYcm1RIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.96
+- name: '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  type: vless
+  server: 172.67.174.25
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.98
+- name: '💦 8 - Trojan - Domain : 8443'
+  type: trojan
+  server: www.speedtest.net
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFRee.pAGES.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiYnY0WnZIOVBIIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.98
+- name: '💦 10 - Trojan - IPv4 : 8443'
+  type: trojan
+  server: 172.66.47.77
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFreE.PAGes.DEv
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiQ21OVXdBZHozTG1XIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.98
+- name: '💦 25 - Trojan - Domain : 2087'
+  type: trojan
+  server: bfree.pages.dev
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BFREE.PAGeS.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNG4zc0toYnBIajVxQzU0eSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 2.98
+- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  type: vless
+  server: 104.17.237.188
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 2.99
+- name: '💦 32 - VLESS - Domain : 2096'
+  type: vless
+  server: www.speedtest.net
+  port: 2096
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFRee.pAGes.DEV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVjVTOHdzempGdCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.0
 - name: '💦 9 - VLESS - IPv4 : 8443'
+  type: vless
+  server: 172.66.44.179
+  port: 8443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bfrEe.pagEs.dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiUm8zSE9ZNldDckVUZzkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.03
+- name: '💦 13 - VLESS - Domain : 2053'
+  type: vless
+  server: bfree.pages.dev
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfREe.pAGes.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTEoxWllFRU8iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.06
+- name: '💦 26 - Trojan - Domain : 2087'
+  type: trojan
+  server: www.speedtest.net
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: BfREe.pAGES.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRHFoVjR0QVBzUnpqUjQzTSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.25
+- name: '💦 10 - VLESS - IPv4 : 8443'
   type: vless
   server: 172.66.47.77
   port: 8443
@@ -1211,19 +1288,64 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFreE.pAGEs.DeV
+  servername: bfrEE.paGEs.dEv
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiQnlkM3JzQ3oiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiQ1FvUDhhalIzQXIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 15.91
+  latency: 3.27
+- name: '💦 26 - VLESS - Domain : 2087'
+  type: vless
+  server: www.speedtest.net
+  port: 2087
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFREe.PAGES.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiTzY3OHNHM3YwOVVmMloiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.27
+- name: '💦 19 - Trojan - Domain : 2083'
+  type: trojan
+  server: bfree.pages.dev
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
+  tls: true
+  sni: bFreE.PagEs.Dev
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiWHUydWt2c2dTU2hyIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.29
 - name: '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS'
   type: vless
   server: boy.solobar.dpdns.org
@@ -1237,21 +1359,98 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 21.25
-- name: CA-16504-WS-TLS
-  type: vless
-  server: 150.230.27.23
-  port: 16504
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  latency: 3.35
+- name: '💦 13 - Trojan - Domain : 2053'
+  type: trojan
+  server: bfree.pages.dev
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  password: soul
   tls: true
-  servername: boy.solobar.dpdns.org
+  sni: BFREe.PAgeS.DeV
   client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
   network: ws
   ws-opts:
+    path: /eyJqdW5rIjoieDRJbHlVYkFpIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 23.91
+      Host: bfree.pages.dev
+  latency: 3.38
+- name: '💦 1 - VLESS - Domain : 443'
+  type: vless
+  server: bfree.pages.dev
+  port: 443
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BFrEe.PAGES.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNGJtekpYTHNURkQxVzFtIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.5
+- name: '💦 15 - VLESS - IPv4 : 2053'
+  type: vless
+  server: 172.66.44.179
+  port: 2053
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: BfReE.PAGEs.DeV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiNlQ1NjRYbjNJZjFHIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.56
+- name: '💦 20 - VLESS - Domain : 2083'
+  type: vless
+  server: www.speedtest.net
+  port: 2083
+  ip-version: ipv4-prefer
+  tfo: false
+  udp: false
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
+  tls: true
+  servername: bFreE.PAGES.deV
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiRks4ODFKVmtsakFZNzlXSCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: bfree.pages.dev
+  latency: 3.72
 - name: US-8443-WS-TLS
   type: vless
   server: 74.121.150.129
@@ -1265,155 +1464,53 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: /
-  latency: 36.91
-- name: US-17628-WS-TLS
+  latency: 7.72
+- name: '💦 14 - VLESS - Domain : 2053'
   type: vless
-  server: 142.171.75.222
-  port: 17628
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 37.26
-- name: US-443-WS-TLS (2)
-  type: vless
-  server: 149.248.7.208
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 37.5
-- name: US-443-WS-TLS
-  type: vless
-  server: 142.171.140.152
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 38.12
-- name: '💦 32 - Trojan - Domain : 2096'
-  type: trojan
   server: www.speedtest.net
-  port: 2096
+  port: 2053
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  password: soul
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
   tls: true
-  sni: BfREe.pageS.DEV
+  servername: bFREe.pAGES.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiaWhKWGtiOUd2R0VndEoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoiYzh6UkZPNHAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 42.11
-- name: '💦 26 - Trojan - Domain : 2087'
-  type: trojan
+  latency: 8.7
+- name: '💦 8 - VLESS - Domain : 8443'
+  type: vless
   server: www.speedtest.net
-  port: 2087
+  port: 8443
   ip-version: ipv4-prefer
   tfo: false
   udp: false
-  password: soul
+  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
+  packet-encoding: ''
   tls: true
-  sni: bFree.PAgES.DEv
+  servername: bFREE.PaGEs.dev
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoieVk4V3p0Y3MiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+    path: /eyJqdW5rIjoienpuM1NBV0VEcnkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 46.21
-- name: US-33388-WS-TLS
-  type: vless
-  server: 104.234.36.27
-  port: 33388
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 48.79
-- name: '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  type: vless
-  server: 172.67.174.25
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 49.56
-- name: '💦 20 - Trojan - Domain : 2083'
-  type: trojan
-  server: www.speedtest.net
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfREe.PagEs.DEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSzJiV25UTnFEWUpDOEVXIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 52.2
-- name: US-38945-WS-TLS
-  type: vless
-  server: 141.148.181.105
-  port: 38945
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 52.46
+  latency: 11.84
 - name: Snippets-vless
   type: vless
   server: mfa.gov.ua
@@ -1427,101 +1524,19 @@ proxies:
     headers:
       Host: snip.soulbar.ggff.net
     path: /?ed=2560
-  latency: 54.81
-- name: US-41389-WS-TLS
+  latency: 12.13
+- name: cdn.tzpro.xyz-80-WS
   type: vless
-  server: 172.83.159.4
-  port: 41389
+  server: cdn.tzpro.xyz
+  port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
+  tls: false
   network: ws
   ws-opts:
     headers:
       Host: boy.solobar.dpdns.org
-    path: /
-  latency: 55.3
-- name: '💦 14 - Trojan - Domain : 2053'
-  type: trojan
-  server: www.speedtest.net
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfree.pagEs.dEv
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiY3pzcmFzSDh3VCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 56.43
-- name: Snippets-vless (1)
-  type: vless
-  server: cf.008500.xyz
-  port: 443
-  uuid: 204774c0-99c5-4454-bbd8-86775343a538
-  tls: true
-  servername: snip.soulbar.ggff.net
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    headers:
-      Host: snip.soulbar.ggff.net
-    path: /?ed=2560
-  latency: 58.52
-- name: '💦 8 - Trojan - Domain : 8443'
-  type: trojan
-  server: www.speedtest.net
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfrEE.pageS.dEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSVdyUU14d3dkNDV3ZiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 61.21
-- name: '💦 2 - Trojan - Domain : 443'
-  type: trojan
-  server: www.speedtest.net
-  port: 443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  password: soul
-  tls: true
-  sni: bfrEe.PAges.deV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiMlVYY0p2OFZ0dXlmYSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 68.14
+    path: '%2F'
+  latency: 14.41
 - name: cdn.tzpro.xyz-443-WS-TLS
   type: vless
   server: cdn.tzpro.xyz
@@ -1535,103 +1550,11 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 74.51
-- name: '💦 32 - VLESS - Domain : 2096'
+  latency: 14.72
+- name: CA-16504-WS-TLS
   type: vless
-  server: www.speedtest.net
-  port: 2096
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: bFreE.PageS.DEV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiWWZsVDAwQXpWIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIiwiWzI2MDI6ZmM1OTpiMDo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iXX0=
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 80.74
-- name: '💦 26 - VLESS - Domain : 2087'
-  type: vless
-  server: www.speedtest.net
-  port: 2087
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfRee.PAges.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieEVUWUFKREd4TnQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 89.76
-- name: '💦 20 - VLESS - Domain : 2083'
-  type: vless
-  server: www.speedtest.net
-  port: 2083
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BfrEE.PAgEs.dev
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoia2pYMDVJdVRkdkUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 100.37
-- name: '💦 14 - VLESS - Domain : 2053'
-  type: vless
-  server: www.speedtest.net
-  port: 2053
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFrEe.paGes.DeV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoicHNnYVRGSHAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 109.88
-- name: NL-443-WS-TLS
-  type: vless
-  server: 147.45.173.149
-  port: 443
+  server: 150.230.27.23
+  port: 16504
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: true
   servername: boy.solobar.dpdns.org
@@ -1641,197 +1564,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: /
-  latency: 110.89
-- name: GB-42515-WS-TLS
-  type: vless
-  server: 150.107.201.226
-  port: 42515
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 113.29
-- name: NL-443-WS-TLS (2)
-  type: vless
-  server: 93.183.88.193
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 115.72
-- name: NL-443-WS-TLS (2)
-  type: vless
-  server: 146.103.33.38
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 116.53
-- name: NL-443-WS-TLS (2)
-  type: vless
-  server: 146.0.73.211
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 117.05
-- name: cdn.tzpro.xyz-80-WS
-  type: vless
-  server: cdn.tzpro.xyz
-  port: 80
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 118.08
-- name: '💦 8 - VLESS - Domain : 8443'
-  type: vless
-  server: www.speedtest.net
-  port: 8443
-  ip-version: ipv4-prefer
-  tfo: false
-  udp: false
-  uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
-  packet-encoding: ''
-  tls: true
-  servername: BFREe.paGeS.deV
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiWHJ2SXRYa0YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-    headers:
-      Host: bfree.pages.dev
-  latency: 118.96
-- name: IT-10443-WS-TLS
-  type: vless
-  server: 179.43.176.163
-  port: 10443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 123.4
-- name: DE-443-WS-TLS
-  type: vless
-  server: 88.218.78.34
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 127.01
-- name: DE-8443-WS-TLS
-  type: vless
-  server: 88.218.78.162
-  port: 8443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 127.54
-- name: solo-US-Railway (4)
-  type: vmess
-  server: cdns.doon.eu.org
-  port: 443
-  uuid: 26a1f636-5a82-4b31-8836-28eafc08d0a7
-  cipher: none
-  network: ws
-  alterId: 0
-  ws-opts:
-    path: /vmess-argo?ed=2560
-    headers:
-      Host: acquisitions-finally-equilibrium-modular.trycloudflare.com
-  tls: true
-  servername: acquisitions-finally-equilibrium-modular.trycloudflare.com
-  latency: 129.86
-- name: AT-443-WS-TLS
-  type: vless
-  server: 94.177.8.3
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 129.99
-- name: DE-2053-WS-TLS
-  type: vless
-  server: 88.218.76.250
-  port: 2053
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 130.16
-- name: DE-443-WS-TLS (2)
-  type: vless
-  server: 94.228.169.108
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 131.46
+  latency: 15.34
 - name: '💦 2 - VLESS - Domain : 443'
   type: vless
   server: www.speedtest.net
@@ -1842,159 +1575,19 @@ proxies:
   uuid: f5c17701-c7d6-4fe4-b8b9-70fdd5e20ace
   packet-encoding: ''
   tls: true
-  servername: bFreE.PAGes.DeV
+  servername: bFReE.pAges.DeV
   client-fingerprint: chrome
   skip-cert-verify: false
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiQ2VBRVYzN1dYZyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iLCJbMjYwMjpmYzU5OjExOjY0OjpdIl19
+    path: /eyJqdW5rIjoiMUk1cGF4RUoiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bfree.pages.dev
-  latency: 133.59
-- name: SE-48004-WS-TLS
-  type: vless
-  server: 139.28.221.213
-  port: 48004
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 134.4
-- name: SE-8443-WS-TLS
-  type: vless
-  server: 141.98.169.24
-  port: 8443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 134.59
-- name: solo-US-Railway
-  type: vless
-  server: cdns.doon.eu.org
-  port: 443
-  uuid: 26a1f636-5a82-4b31-8836-28eafc08d0a7
-  tls: true
-  servername: acquisitions-finally-equilibrium-modular.trycloudflare.com
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    headers:
-      Host: acquisitions-finally-equilibrium-modular.trycloudflare.com
-    path: /vless-argo?ed=2560
-  latency: 134.71
-- name: SE-2053-WS-TLS
-  type: vless
-  server: 139.28.220.16
-  port: 2053
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 135.4
-- name: NL-443-WS-TLS (2)
-  type: vless
-  server: 146.103.33.57
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 135.76
-- name: JP-8443-WS-TLS
-  type: vless
-  server: 152.69.199.70
-  port: 8443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 139.19
-- name: JP-45681-WS-TLS
-  type: vless
-  server: 150.230.5.34
-  port: 45681
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 139.69
-- name: PL-2053-WS-TLS
-  type: vless
-  server: 151.115.61.151
-  port: 2053
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 141.37
-- name: RU-443-WS-TLS
-  type: vless
-  server: 141.105.70.114
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 153.42
-- name: NL-443-WS-TLS (2)
-  type: vless
-  server: 81.22.132.254
-  port: 443
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 164.58
+  latency: 15.82
 - name: Snippets-vless (1)
   type: vless
   server: store.ubi.com
@@ -2008,48 +1601,49 @@ proxies:
     headers:
       Host: snip.soulbar.ggff.net
     path: /?ed=2560
-  latency: 173.36
-- name: SG-61731-WS-TLS
+  latency: 31.79
+- name: Snippets-vless (1)
   type: vless
-  server: 168.138.181.188
-  port: 61731
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 209.59
-- name: IN-2053-WS-TLS
-  type: vless
-  server: 148.113.43.228
-  port: 2053
-  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: true
-  servername: boy.solobar.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    headers:
-      Host: boy.solobar.dpdns.org
-    path: /
-  latency: 230.13
-- name: vless-reality
-  type: vless
-  server: 103.99.52.140
+  server: cf.008500.xyz
   port: 443
-  uuid: c16cf553-264e-4337-da22-9396c03f0a7a
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
   tls: true
-  reality-opts:
-    public-key: awcvVtOYE0QsEu7OVTe_eQvcM99_3vBI8Qzxry6wBUw
-    short-id: ''
+  servername: snip.soulbar.ggff.net
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    headers:
+      Host: snip.soulbar.ggff.net
+    path: /?ed=2560
+  latency: 42.98
+- name: US-443-WS-TLS
+  type: vless
+  server: 142.171.140.152
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
   client-fingerprint: chrome
-  servername: go.microsoft.com
-  network: tcp
-  latency: 234.84
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 60.49
+- name: US-38945-WS-TLS
+  type: vless
+  server: 141.148.181.105
+  port: 38945
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 60.66
 - name: cfip.cfcdn.vip-443-WS-TLS
   type: vless
   server: cfip.cfcdn.vip
@@ -2063,19 +1657,343 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 241.16
-- name: cfip.cfcdn.vip-80-WS
+  latency: 62.39
+- name: US-443-WS-TLS (2)
   type: vless
-  server: cfip.cfcdn.vip
-  port: 80
+  server: 149.248.7.208
+  port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
-  tls: false
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     headers:
       Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 241.63
+    path: /
+  latency: 64.6
+- name: US-33388-WS-TLS
+  type: vless
+  server: 104.234.36.27
+  port: 33388
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 65.03
+- name: US-17628-WS-TLS
+  type: vless
+  server: 142.171.75.222
+  port: 17628
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 65.31
+- name: NL-443-WS-TLS (2)
+  type: vless
+  server: 93.183.88.193
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 82.58
+- name: NL-443-WS-TLS
+  type: vless
+  server: 147.45.173.149
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 83.23
+- name: NL-443-WS-TLS (2)
+  type: vless
+  server: 81.22.132.254
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 87.15
+- name: GB-42515-WS-TLS
+  type: vless
+  server: 150.107.201.226
+  port: 42515
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 88.05
+- name: NL-443-WS-TLS (2)
+  type: vless
+  server: 146.0.73.211
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 89.94
+- name: US-41389-WS-TLS
+  type: vless
+  server: 172.83.159.4
+  port: 41389
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 93.24
+- name: NL-443-WS-TLS (2)
+  type: vless
+  server: 146.103.33.38
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 94.28
+- name: DE-443-WS-TLS
+  type: vless
+  server: 88.218.78.34
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 94.53
+- name: NL-443-WS-TLS (2)
+  type: vless
+  server: 146.103.33.57
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 94.57
+- name: AT-443-WS-TLS
+  type: vless
+  server: 94.177.8.3
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 100.12
+- name: DE-2053-WS-TLS
+  type: vless
+  server: 88.218.76.250
+  port: 2053
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 100.98
+- name: DE-8443-WS-TLS
+  type: vless
+  server: 88.218.78.162
+  port: 8443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 102.93
+- name: IT-10443-WS-TLS
+  type: vless
+  server: 179.43.176.163
+  port: 10443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 103.98
+- name: SE-8443-WS-TLS
+  type: vless
+  server: 141.98.169.24
+  port: 8443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 104.45
+- name: SE-2053-WS-TLS
+  type: vless
+  server: 139.28.220.16
+  port: 2053
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 105.53
+- name: SE-48004-WS-TLS
+  type: vless
+  server: 139.28.221.213
+  port: 48004
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 107.59
+- name: DE-443-WS-TLS (2)
+  type: vless
+  server: 94.228.169.108
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 107.84
+- name: PL-2053-WS-TLS
+  type: vless
+  server: 151.115.61.151
+  port: 2053
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 111.99
+- name: RU-443-WS-TLS
+  type: vless
+  server: 141.105.70.114
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 125.46
+- name: JP-45681-WS-TLS
+  type: vless
+  server: 150.230.5.34
+  port: 45681
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 166.72
+- name: JP-8443-WS-TLS
+  type: vless
+  server: 152.69.199.70
+  port: 8443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 171.93
 - name: xn--b6gac.eu.org-80-WS
   type: vless
   server: xn--b6gac.eu.org
@@ -2087,7 +2005,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 307.58
+  latency: 175.19
 - name: xn--b6gac.eu.org-443-WS-TLS
   type: vless
   server: xn--b6gac.eu.org
@@ -2101,11 +2019,24 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 308.22
-- name: '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
+  latency: 176.58
+- name: vless-reality
   type: vless
-  server: saas.sin.fan
+  server: 103.99.52.140
   port: 443
+  uuid: c16cf553-264e-4337-da22-9396c03f0a7a
+  tls: true
+  reality-opts:
+    public-key: awcvVtOYE0QsEu7OVTe_eQvcM99_3vBI8Qzxry6wBUw
+    short-id: ''
+  client-fingerprint: chrome
+  servername: go.microsoft.com
+  network: tcp
+  latency: 190.13
+- name: IN-2053-WS-TLS
+  type: vless
+  server: 148.113.43.228
+  port: 2053
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: true
   servername: boy.solobar.dpdns.org
@@ -2115,10 +2046,24 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: /
-  latency: 388.38
-- name: cfip.1323123.xyz-443-WS-TLS
+  latency: 197.59
+- name: SG-61731-WS-TLS
   type: vless
-  server: cfip.1323123.xyz
+  server: 168.138.181.188
+  port: 61731
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: /
+  latency: 219.72
+- name: cloudflare.182682.xyz-443-WS-TLS
+  type: vless
+  server: cloudflare.182682.xyz
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: true
@@ -2129,10 +2074,10 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 422.48
-- name: cfip.1323123.xyz-80-WS
+  latency: 238.83
+- name: cloudflare.182682.xyz-80-WS
   type: vless
-  server: cfip.1323123.xyz
+  server: cloudflare.182682.xyz
   port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: false
@@ -2141,7 +2086,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 422.76
+  latency: 238.83
 - name: cf.090227.xyz-80-WS
   type: vless
   server: cf.090227.xyz
@@ -2153,7 +2098,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 427.61
+  latency: 255.97
 - name: cf.090227.xyz-443-WS-TLS
   type: vless
   server: cf.090227.xyz
@@ -2167,7 +2112,7 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 428.56
+  latency: 256.67
 - name: Snippets-vless (1)
   type: vless
   server: cf.090227.xyz
@@ -2181,10 +2126,38 @@ proxies:
     headers:
       Host: snip.soulbar.ggff.net
     path: /?ed=2560
-  latency: 431.53
-- name: cf.0sm.com-80-WS
+  latency: 260.38
+- name: Snippets-vless (1)
   type: vless
-  server: cf.0sm.com
+  server: cf.877774.xyz
+  port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  tls: true
+  servername: snip.soulbar.ggff.net
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    headers:
+      Host: snip.soulbar.ggff.net
+    path: /?ed=2560
+  latency: 275.83
+- name: Snippets-vless (1)
+  type: vless
+  server: cf.130519.xyz
+  port: 443
+  uuid: 204774c0-99c5-4454-bbd8-86775343a538
+  tls: true
+  servername: snip.soulbar.ggff.net
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    headers:
+      Host: snip.soulbar.ggff.net
+    path: /?ed=2560
+  latency: 278.93
+- name: 115155.xyz-80-WS
+  type: vless
+  server: 115155.xyz
   port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: false
@@ -2193,7 +2166,73 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 438.76
+  latency: 331.92
+- name: 115155.xyz-443-WS-TLS
+  type: vless
+  server: 115155.xyz
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 332.04
+- name: cf.877771.xyz-80-WS
+  type: vless
+  server: cf.877771.xyz
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 342.71
+- name: cf.877771.xyz-443-WS-TLS
+  type: vless
+  server: cf.877771.xyz
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 343.08
+- name: cdn.2020111.xyz-443-WS-TLS
+  type: vless
+  server: cdn.2020111.xyz
+  port: 443
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: true
+  servername: boy.solobar.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 418.66
+- name: cdn.2020111.xyz-80-WS
+  type: vless
+  server: cdn.2020111.xyz
+  port: 80
+  uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
+  tls: false
+  network: ws
+  ws-opts:
+    headers:
+      Host: boy.solobar.dpdns.org
+    path: '%2F'
+  latency: 418.76
 - name: cf.0sm.com-443-WS-TLS
   type: vless
   server: cf.0sm.com
@@ -2207,10 +2246,10 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 439.99
-- name: cnamefuckxxs.yuchen.icu-80-WS
+  latency: 483.01
+- name: cf.0sm.com-80-WS
   type: vless
-  server: cnamefuckxxs.yuchen.icu
+  server: cf.0sm.com
   port: 80
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: false
@@ -2219,10 +2258,10 @@ proxies:
     headers:
       Host: boy.solobar.dpdns.org
     path: '%2F'
-  latency: 499.18
-- name: cnamefuckxxs.yuchen.icu-443-WS-TLS
+  latency: 483.12
+- name: '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
   type: vless
-  server: cnamefuckxxs.yuchen.icu
+  server: saas.sin.fan
   port: 443
   uuid: 04fccc8f-8a2b-41b7-9b74-d256e6b039b9
   tls: true
@@ -2232,144 +2271,147 @@ proxies:
   ws-opts:
     headers:
       Host: boy.solobar.dpdns.org
-    path: '%2F'
-  latency: 499.76
+    path: /
+  latency: 483.24
 proxy-groups:
 - name: 🚀 自动选择
   type: url-test
   proxies:
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 19 - Trojan - Domain : 2083'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 1 - Trojan - Domain : 443'
-  - '💦 3 - Trojan - IPv4 : 443'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '💦 16 - VLESS - IPv4 : 2053'
-  - '💦 34 - Trojan - IPv4 : 2096'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 25 - Trojan - Domain : 2087'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 10 - Trojan - IPv4 : 8443'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 21 - VLESS - IPv4 : 2083'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 7 - VLESS - Domain : 8443'
-  - '💦 28 - VLESS - IPv4 : 2087'
-  - '💦 4 - Trojan - IPv4 : 443'
-  - '💦 34 - VLESS - IPv4 : 2096'
-  - '💦 15 - VLESS - IPv4 : 2053'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 31 - Trojan - Domain : 2096'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '💦 15 - Trojan - IPv4 : 2053'
-  - '%E7%A7%BB%E5%8A%A8-80-WS'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 1 - VLESS - Domain : 443'
   - '💦 22 - Trojan - IPv4 : 2083'
-  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
+  - '💦 34 - Trojan - IPv4 : 2096'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 27 - Trojan - IPv4 : 2087'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
   - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '💦 15 - Trojan - IPv4 : 2053'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  - '💦 1 - Trojan - Domain : 443'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '💦 31 - VLESS - Domain : 2096'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 21 - Trojan - IPv4 : 2083'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '💦 33 - Trojan - IPv4 : 2096'
-  - '💦 27 - Trojan - IPv4 : 2087'
-  - '💦 3 - VLESS - IPv4 : 443'
-  - '💦 16 - Trojan - IPv4 : 2053'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '💦 33 - VLESS - IPv4 : 2096'
-  - '💦 27 - VLESS - IPv4 : 2087'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS'
-  - '💦 13 - Trojan - Domain : 2053'
-  - '💦 10 - VLESS - IPv4 : 8443'
-  - '💦 7 - Trojan - Domain : 8443'
-  - '💦 13 - VLESS - Domain : 2053'
-  - '%E8%81%94%E9%80%9A-80-WS'
-  - '💦 9 - VLESS - IPv4 : 8443'
-  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS'
-  - CA-16504-WS-TLS
-  - US-8443-WS-TLS
-  - US-17628-WS-TLS
-  - US-443-WS-TLS (2)
-  - US-443-WS-TLS
-  - '💦 32 - Trojan - Domain : 2096'
-  - '💦 26 - Trojan - Domain : 2087'
-  - US-33388-WS-TLS
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '💦 20 - Trojan - Domain : 2083'
-  - US-38945-WS-TLS
-  - Snippets-vless
-  - US-41389-WS-TLS
   - '💦 14 - Trojan - Domain : 2053'
-  - Snippets-vless (1)
-  - '💦 8 - Trojan - Domain : 8443'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS'
+  - '%E7%A7%BB%E5%8A%A8-80-WS'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 22 - VLESS - IPv4 : 2083'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  - '💦 34 - VLESS - IPv4 : 2096'
+  - '💦 9 - Trojan - IPv4 : 8443'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS'
+  - '💦 28 - Trojan - IPv4 : 2087'
+  - '💦 25 - VLESS - Domain : 2087'
+  - '💦 7 - Trojan - Domain : 8443'
+  - '%E7%94%B5%E4%BF%A1-80-WS'
   - '💦 2 - Trojan - Domain : 443'
-  - cdn.tzpro.xyz-443-WS-TLS
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS'
+  - '%E8%81%94%E9%80%9A-80-WS'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 4 - Trojan - IPv4 : 443'
+  - '💦 20 - Trojan - Domain : 2083'
+  - '💦 31 - Trojan - Domain : 2096'
+  - '💦 3 - VLESS - IPv4 : 443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 32 - Trojan - Domain : 2096'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '💦 21 - VLESS - IPv4 : 2083'
+  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
+  - '💦 16 - VLESS - IPv4 : 2053'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 21 - Trojan - IPv4 : 2083'
+  - '💦 4 - VLESS - IPv4 : 443'
+  - '💦 27 - VLESS - IPv4 : 2087'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '💦 8 - Trojan - Domain : 8443'
+  - '💦 10 - Trojan - IPv4 : 8443'
+  - '💦 25 - Trojan - Domain : 2087'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
   - '💦 32 - VLESS - Domain : 2096'
+  - '💦 9 - VLESS - IPv4 : 8443'
+  - '💦 13 - VLESS - Domain : 2053'
+  - '💦 26 - Trojan - Domain : 2087'
+  - '💦 10 - VLESS - IPv4 : 8443'
   - '💦 26 - VLESS - Domain : 2087'
+  - '💦 19 - Trojan - Domain : 2083'
+  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS'
+  - '💦 13 - Trojan - Domain : 2053'
+  - '💦 1 - VLESS - Domain : 443'
+  - '💦 15 - VLESS - IPv4 : 2053'
   - '💦 20 - VLESS - Domain : 2083'
+  - US-8443-WS-TLS
   - '💦 14 - VLESS - Domain : 2053'
+  - '💦 8 - VLESS - Domain : 8443'
+  - Snippets-vless
+  - cdn.tzpro.xyz-80-WS
+  - cdn.tzpro.xyz-443-WS-TLS
+  - CA-16504-WS-TLS
+  - '💦 2 - VLESS - Domain : 443'
+  - Snippets-vless (1)
+  - Snippets-vless (1)
+  - US-443-WS-TLS
+  - US-38945-WS-TLS
+  - cfip.cfcdn.vip-443-WS-TLS
+  - US-443-WS-TLS (2)
+  - US-33388-WS-TLS
+  - US-17628-WS-TLS
+  - NL-443-WS-TLS (2)
   - NL-443-WS-TLS
+  - NL-443-WS-TLS (2)
   - GB-42515-WS-TLS
   - NL-443-WS-TLS (2)
+  - US-41389-WS-TLS
   - NL-443-WS-TLS (2)
-  - NL-443-WS-TLS (2)
-  - cdn.tzpro.xyz-80-WS
-  - '💦 8 - VLESS - Domain : 8443'
-  - IT-10443-WS-TLS
   - DE-443-WS-TLS
-  - DE-8443-WS-TLS
-  - solo-US-Railway (4)
+  - NL-443-WS-TLS (2)
   - AT-443-WS-TLS
   - DE-2053-WS-TLS
-  - DE-443-WS-TLS (2)
-  - '💦 2 - VLESS - Domain : 443'
-  - SE-48004-WS-TLS
+  - DE-8443-WS-TLS
+  - IT-10443-WS-TLS
   - SE-8443-WS-TLS
-  - solo-US-Railway
   - SE-2053-WS-TLS
-  - NL-443-WS-TLS (2)
-  - JP-8443-WS-TLS
-  - JP-45681-WS-TLS
+  - SE-48004-WS-TLS
+  - DE-443-WS-TLS (2)
   - PL-2053-WS-TLS
   - RU-443-WS-TLS
-  - NL-443-WS-TLS (2)
-  - Snippets-vless (1)
-  - SG-61731-WS-TLS
-  - IN-2053-WS-TLS
-  - vless-reality
-  - cfip.cfcdn.vip-443-WS-TLS
-  - cfip.cfcdn.vip-80-WS
+  - JP-45681-WS-TLS
+  - JP-8443-WS-TLS
   - xn--b6gac.eu.org-80-WS
   - xn--b6gac.eu.org-443-WS-TLS
-  - '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
-  - cfip.1323123.xyz-443-WS-TLS
-  - cfip.1323123.xyz-80-WS
+  - vless-reality
+  - IN-2053-WS-TLS
+  - SG-61731-WS-TLS
+  - cloudflare.182682.xyz-443-WS-TLS
+  - cloudflare.182682.xyz-80-WS
   - cf.090227.xyz-80-WS
   - cf.090227.xyz-443-WS-TLS
   - Snippets-vless (1)
-  - cf.0sm.com-80-WS
+  - Snippets-vless (1)
+  - Snippets-vless (1)
+  - 115155.xyz-80-WS
+  - 115155.xyz-443-WS-TLS
+  - cf.877771.xyz-80-WS
+  - cf.877771.xyz-443-WS-TLS
+  - cdn.2020111.xyz-443-WS-TLS
+  - cdn.2020111.xyz-80-WS
   - cf.0sm.com-443-WS-TLS
-  - cnamefuckxxs.yuchen.icu-80-WS
-  - cnamefuckxxs.yuchen.icu-443-WS-TLS
+  - cf.0sm.com-80-WS
+  - '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -2377,161 +2419,164 @@ proxy-groups:
   type: select
   proxies:
   - 🚀 自动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 19 - Trojan - Domain : 2083'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 1 - Trojan - Domain : 443'
-  - '💦 3 - Trojan - IPv4 : 443'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '💦 16 - VLESS - IPv4 : 2053'
-  - '💦 34 - Trojan - IPv4 : 2096'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 25 - Trojan - Domain : 2087'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 10 - Trojan - IPv4 : 8443'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 21 - VLESS - IPv4 : 2083'
-  - '%E7%94%B5%E4%BF%A1-443-WS-TLS'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 7 - VLESS - Domain : 8443'
-  - '💦 28 - VLESS - IPv4 : 2087'
-  - '💦 4 - Trojan - IPv4 : 443'
-  - '💦 34 - VLESS - IPv4 : 2096'
-  - '💦 15 - VLESS - IPv4 : 2053'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
-  - '💦 31 - Trojan - Domain : 2096'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '💦 15 - Trojan - IPv4 : 2053'
-  - '%E7%A7%BB%E5%8A%A8-80-WS'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 1 - VLESS - Domain : 443'
   - '💦 22 - Trojan - IPv4 : 2083'
-  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
+  - '💦 34 - Trojan - IPv4 : 2096'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 27 - Trojan - IPv4 : 2087'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
   - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '💦 15 - Trojan - IPv4 : 2053'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  - '💦 1 - Trojan - Domain : 443'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '💦 31 - VLESS - Domain : 2096'
-  - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 21 - Trojan - IPv4 : 2083'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '💦 33 - Trojan - IPv4 : 2096'
-  - '💦 27 - Trojan - IPv4 : 2087'
-  - '💦 3 - VLESS - IPv4 : 443'
-  - '💦 16 - Trojan - IPv4 : 2053'
-  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
-  - '💦 33 - VLESS - IPv4 : 2096'
-  - '💦 27 - VLESS - IPv4 : 2087'
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS'
-  - '💦 13 - Trojan - Domain : 2053'
-  - '💦 10 - VLESS - IPv4 : 8443'
-  - '💦 7 - Trojan - Domain : 8443'
-  - '💦 13 - VLESS - Domain : 2053'
-  - '%E8%81%94%E9%80%9A-80-WS'
-  - '💦 9 - VLESS - IPv4 : 8443'
-  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS'
-  - CA-16504-WS-TLS
-  - US-8443-WS-TLS
-  - US-17628-WS-TLS
-  - US-443-WS-TLS (2)
-  - US-443-WS-TLS
-  - '💦 32 - Trojan - Domain : 2096'
-  - '💦 26 - Trojan - Domain : 2087'
-  - US-33388-WS-TLS
-  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
-  - '💦 20 - Trojan - Domain : 2083'
-  - US-38945-WS-TLS
-  - Snippets-vless
-  - US-41389-WS-TLS
   - '💦 14 - Trojan - Domain : 2053'
-  - Snippets-vless (1)
-  - '💦 8 - Trojan - Domain : 8443'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS'
+  - '%E7%A7%BB%E5%8A%A8-80-WS'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 22 - VLESS - IPv4 : 2083'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
+  - '💦 34 - VLESS - IPv4 : 2096'
+  - '💦 9 - Trojan - IPv4 : 8443'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS'
+  - '💦 28 - Trojan - IPv4 : 2087'
+  - '💦 25 - VLESS - Domain : 2087'
+  - '💦 7 - Trojan - Domain : 8443'
+  - '%E7%94%B5%E4%BF%A1-80-WS'
   - '💦 2 - Trojan - Domain : 443'
-  - cdn.tzpro.xyz-443-WS-TLS
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS'
+  - '%E8%81%94%E9%80%9A-80-WS'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 4 - Trojan - IPv4 : 443'
+  - '💦 20 - Trojan - Domain : 2083'
+  - '💦 31 - Trojan - Domain : 2096'
+  - '💦 3 - VLESS - IPv4 : 443'
+  - '💦 33 - VLESS - IPv4 : 2096'
+  - '💦 32 - Trojan - Domain : 2096'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '💦 21 - VLESS - IPv4 : 2083'
+  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-80-WS'
+  - '💦 16 - VLESS - IPv4 : 2053'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 19 - VLESS - Domain : 2083'
+  - '💦 21 - Trojan - IPv4 : 2083'
+  - '💦 4 - VLESS - IPv4 : 443'
+  - '💦 27 - VLESS - IPv4 : 2087'
+  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '💦 8 - Trojan - Domain : 8443'
+  - '💦 10 - Trojan - IPv4 : 8443'
+  - '💦 25 - Trojan - Domain : 2087'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
   - '💦 32 - VLESS - Domain : 2096'
+  - '💦 9 - VLESS - IPv4 : 8443'
+  - '💦 13 - VLESS - Domain : 2053'
+  - '💦 26 - Trojan - Domain : 2087'
+  - '💦 10 - VLESS - IPv4 : 8443'
   - '💦 26 - VLESS - Domain : 2087'
+  - '💦 19 - Trojan - Domain : 2083'
+  - '%E5%8E%9F%E7%94%9F%E5%9C%B0%E5%9D%80-443-WS-TLS'
+  - '💦 13 - Trojan - Domain : 2053'
+  - '💦 1 - VLESS - Domain : 443'
+  - '💦 15 - VLESS - IPv4 : 2053'
   - '💦 20 - VLESS - Domain : 2083'
+  - US-8443-WS-TLS
   - '💦 14 - VLESS - Domain : 2053'
+  - '💦 8 - VLESS - Domain : 8443'
+  - Snippets-vless
+  - cdn.tzpro.xyz-80-WS
+  - cdn.tzpro.xyz-443-WS-TLS
+  - CA-16504-WS-TLS
+  - '💦 2 - VLESS - Domain : 443'
+  - Snippets-vless (1)
+  - Snippets-vless (1)
+  - US-443-WS-TLS
+  - US-38945-WS-TLS
+  - cfip.cfcdn.vip-443-WS-TLS
+  - US-443-WS-TLS (2)
+  - US-33388-WS-TLS
+  - US-17628-WS-TLS
+  - NL-443-WS-TLS (2)
   - NL-443-WS-TLS
+  - NL-443-WS-TLS (2)
   - GB-42515-WS-TLS
   - NL-443-WS-TLS (2)
+  - US-41389-WS-TLS
   - NL-443-WS-TLS (2)
-  - NL-443-WS-TLS (2)
-  - cdn.tzpro.xyz-80-WS
-  - '💦 8 - VLESS - Domain : 8443'
-  - IT-10443-WS-TLS
   - DE-443-WS-TLS
-  - DE-8443-WS-TLS
-  - solo-US-Railway (4)
+  - NL-443-WS-TLS (2)
   - AT-443-WS-TLS
   - DE-2053-WS-TLS
-  - DE-443-WS-TLS (2)
-  - '💦 2 - VLESS - Domain : 443'
-  - SE-48004-WS-TLS
+  - DE-8443-WS-TLS
+  - IT-10443-WS-TLS
   - SE-8443-WS-TLS
-  - solo-US-Railway
   - SE-2053-WS-TLS
-  - NL-443-WS-TLS (2)
-  - JP-8443-WS-TLS
-  - JP-45681-WS-TLS
+  - SE-48004-WS-TLS
+  - DE-443-WS-TLS (2)
   - PL-2053-WS-TLS
   - RU-443-WS-TLS
-  - NL-443-WS-TLS (2)
-  - Snippets-vless (1)
-  - SG-61731-WS-TLS
-  - IN-2053-WS-TLS
-  - vless-reality
-  - cfip.cfcdn.vip-443-WS-TLS
-  - cfip.cfcdn.vip-80-WS
+  - JP-45681-WS-TLS
+  - JP-8443-WS-TLS
   - xn--b6gac.eu.org-80-WS
   - xn--b6gac.eu.org-443-WS-TLS
-  - '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
-  - cfip.1323123.xyz-443-WS-TLS
-  - cfip.1323123.xyz-80-WS
+  - vless-reality
+  - IN-2053-WS-TLS
+  - SG-61731-WS-TLS
+  - cloudflare.182682.xyz-443-WS-TLS
+  - cloudflare.182682.xyz-80-WS
   - cf.090227.xyz-80-WS
   - cf.090227.xyz-443-WS-TLS
   - Snippets-vless (1)
-  - cf.0sm.com-80-WS
+  - Snippets-vless (1)
+  - Snippets-vless (1)
+  - 115155.xyz-80-WS
+  - 115155.xyz-443-WS-TLS
+  - cf.877771.xyz-80-WS
+  - cf.877771.xyz-443-WS-TLS
+  - cdn.2020111.xyz-443-WS-TLS
+  - cdn.2020111.xyz-80-WS
   - cf.0sm.com-443-WS-TLS
-  - cnamefuckxxs.yuchen.icu-80-WS
-  - cnamefuckxxs.yuchen.icu-443-WS-TLS
+  - cf.0sm.com-80-WS
+  - '%E5%8A%A0%E5%85%A5%E9%A2%91%E9%81%93%40kejiland00-443-WS-TLS'
 - name: ⚡ 最快节点
   type: url-test
   proxies:
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
-  - '💦 19 - Trojan - Domain : 2083'
-  - '%E7%A7%BB%E5%8A%A8-443-WS-TLS (2)'
+  - '💦 22 - Trojan - IPv4 : 2083'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 1 - Trojan - Domain : 443'
   - '💦 3 - Trojan - IPv4 : 443'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
-  - '💦 16 - VLESS - IPv4 : 2053'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
   - '💦 34 - Trojan - IPv4 : 2096'
-  - '💦 25 - VLESS - Domain : 2087'
-  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '%E8%81%94%E9%80%9A-80-WS (2)'
-  - '💦 25 - Trojan - Domain : 2087'
+  - '💦 16 - Trojan - IPv4 : 2053'
+  - '💦 7 - VLESS - Domain : 8443'
+  - '%E8%81%94%E9%80%9A-80-WS (2)'
+  - '💦 27 - Trojan - IPv4 : 2087'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '%E8%81%94%E9%80%9A-443-WS-TLS (2)'
   - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
-  - '💦 10 - Trojan - IPv4 : 8443'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '💦 15 - Trojan - IPv4 : 2053'
+  - '%E7%94%B5%E4%BF%A1-80-WS (2)'
+  - '%E7%A7%BB%E5%8A%A8-80-WS (2)'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -2541,110 +2586,110 @@ proxy-groups:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: ChatGPT
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Netflix
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Cloudflare
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Google
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Telegram
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Twitter
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Facebook
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: GitHub
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: Microsoft
   type: select
   proxies:
   - 🚀 自动选择
   - ⚡ 最快节点
   - 🔯 手动选择
-  - '💦 9 - Trojan - IPv4 : 8443'
-  - '💦 4 - VLESS - IPv4 : 443'
-  - '💦 28 - Trojan - IPv4 : 2087'
-  - '%E7%94%B5%E4%BF%A1-80-WS'
-  - '💦 22 - VLESS - IPv4 : 2083'
+  - '💦 22 - Trojan - IPv4 : 2083'
+  - '%E7%94%B5%E4%BF%A1-443-WS-TLS (2)'
+  - '💦 3 - Trojan - IPv4 : 443'
+  - '💦 33 - Trojan - IPv4 : 2096'
+  - '💦 28 - VLESS - IPv4 : 2087'
 - name: 🎯 全球直连
   type: select
   proxies:
