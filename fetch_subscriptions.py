@@ -362,11 +362,43 @@ def fetch_subscription(url, timeout=30):
         traceback.print_exc()
         return None
 
+def sanitize_node_name(name):
+    """清理节点名称，移除可能导致问题的特殊字符"""
+    if not name:
+        return name
+    
+    import re
+    # 移除控制字符和可能导致问题的字符
+    # 保留常见的中文、英文、数字、常用标点
+    # 移除可能导致编码问题的特殊字符
+    name = re.sub(r'[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f-\x9f]', '', name)  # 移除控制字符
+    name = name.strip()
+    
+    # 限制名称长度，避免过长
+    if len(name) > 100:
+        name = name[:100]
+    
+    return name
+
+def ensure_unique_name(name, seen_names, counter=1):
+    """确保节点名称唯一"""
+    if not name:
+        return None, counter
+    
+    original_name = name
+    while name in seen_names:
+        name = f"{original_name}-{counter}"
+        counter += 1
+    
+    seen_names.add(name)
+    return name, counter
+
 def fetch_all_subscriptions(urls):
     """获取所有订阅链接的节点"""
     all_nodes = []
     seen_names = set()
     seen_identifiers = set()  # 用于去重：server:port:type:uuid的组合
+    name_counter = {}  # 用于跟踪每个基础名称的计数器
     
     for i, url in enumerate(urls, 1):
         print(f"\n[{i}/{len(urls)}] 正在获取订阅: {url}")
@@ -378,36 +410,61 @@ def fetch_all_subscriptions(urls):
                 server = node.get('server', '')
                 port = node.get('port', 0)
                 node_type = node.get('type', '')
-                uuid = node.get('uuid', '') or node.get('password', '')  # UUID或密码作为标识
+                uuid = node.get('uuid', '') or node.get('password', '') or ''  # UUID或密码作为标识
                 identifier = f"{node_type}:{server}:{port}:{uuid}"
                 
-                # 去重（基于唯一标识符和节点名称）
+                # 如果标识符已存在，跳过（真正的重复节点）
+                if identifier in seen_identifiers:
+                    continue
+                
+                seen_identifiers.add(identifier)
+                
+                # 获取并清理节点名称
                 node_name = node.get('name', '')
-                if identifier not in seen_identifiers:
-                    seen_identifiers.add(identifier)
-                    
-                    # 如果名称已存在，添加来源标记
-                    if node_name and node_name in seen_names:
-                        node['name'] = f"{node_name} ({i})"
-                        node_name = node['name']  # 更新节点名称
-                    
-                    if node_name:
-                        seen_names.add(node_name)
-                    
+                node_name = sanitize_node_name(node_name)
+                
+                # 如果名称为空，生成一个
+                if not node_name:
+                    node_name = f"{node_type}-{server}-{port}"
+                
+                # 确保名称唯一
+                unique_name, counter = ensure_unique_name(node_name, seen_names)
+                if unique_name:
+                    node['name'] = unique_name
                     all_nodes.append(node)
                     added_count += 1
-                elif not node_name:
-                    # 如果没有名称，尝试生成唯一名称
-                    unique_name = f"{node_type}-{server}-{port}"
-                    if unique_name not in seen_names:
-                        seen_names.add(unique_name)
-                        node['name'] = unique_name
-                        all_nodes.append(node)
-                        added_count += 1
+                else:
+                    # 如果还是无法生成唯一名称，使用标识符的一部分
+                    fallback_name = f"{node_type}-{server}-{port}-{uuid[:8] if uuid else i}"
+                    unique_name, _ = ensure_unique_name(fallback_name, seen_names)
+                    node['name'] = unique_name
+                    all_nodes.append(node)
+                    added_count += 1
             
             print(f"  ✓ 从该订阅添加了 {added_count} 个节点（去重后）")
         else:
             print(f"  ✗ 未获取到节点")
+    
+    # 最终检查：确保所有节点名称唯一
+    final_names = {}
+    duplicate_count = 0
+    for node in all_nodes:
+        node_name = node.get('name', '')
+        if node_name in final_names:
+            duplicate_count += 1
+            # 为重复的名称添加后缀
+            counter = final_names[node_name] + 1
+            new_name = f"{node_name}-{counter}"
+            while new_name in final_names:
+                counter += 1
+                new_name = f"{node_name}-{counter}"
+            node['name'] = new_name
+            final_names[new_name] = 1
+        else:
+            final_names[node_name] = 1
+    
+    if duplicate_count > 0:
+        print(f"  ⚠️  检测到 {duplicate_count} 个重复名称，已自动修复")
     
     print(f"\n{'='*60}")
     print(f"总共获取到 {len(all_nodes)} 个唯一节点")

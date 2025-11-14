@@ -12,8 +12,38 @@ def generate_clash_config(nodes):
     # 复制模板配置
     config = CLASH_CONFIG_TEMPLATE.copy()
     
+    # 最终检查：确保所有节点名称唯一
+    seen_names = set()
+    unique_nodes = []
+    duplicate_count = 0
+    
+    for node in nodes:
+        node_name = node.get('name', '')
+        if not node_name:
+            # 如果没有名称，生成一个
+            server = node.get('server', 'unknown')
+            port = node.get('port', 0)
+            node_type = node.get('type', 'proxy')
+            node_name = f"{node_type}-{server}-{port}"
+            node['name'] = node_name
+        
+        # 确保名称唯一
+        original_name = node_name
+        counter = 1
+        while node_name in seen_names:
+            node_name = f"{original_name}-{counter}"
+            counter += 1
+            duplicate_count += 1
+        
+        node['name'] = node_name
+        seen_names.add(node_name)
+        unique_nodes.append(node)
+    
+    if duplicate_count > 0:
+        print(f"  ⚠️  在生成配置时发现 {duplicate_count} 个重复名称，已自动修复")
+    
     # 按延迟排序节点
-    sorted_nodes = sorted(nodes, key=lambda x: x.get('latency', 9999))
+    sorted_nodes = sorted(unique_nodes, key=lambda x: x.get('latency', 9999))
     
     # 添加节点列表
     config['proxies'] = sorted_nodes
