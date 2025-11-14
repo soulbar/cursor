@@ -170,6 +170,69 @@ def parse_proxy_url(proxy_url):
         except:
             pass
     
+    elif proxy_url.startswith('hysteria2://') or proxy_url.startswith('hysteria://'):
+        # Hysteria2格式: hysteria2://password@server:port?params#name
+        # 也支持旧版hysteria://
+        try:
+            protocol_prefix = 'hysteria2://' if proxy_url.startswith('hysteria2://') else 'hysteria://'
+            parts = proxy_url[len(protocol_prefix):].split('#')
+            name = parts[1] if len(parts) > 1 else ''
+            
+            main_part = parts[0].split('?')
+            if len(main_part) >= 1:
+                server_part = main_part[0].split('@')
+                if len(server_part) == 2:
+                    password = server_part[0]
+                    server_port = server_part[1].split(':')
+                    if len(server_port) == 2:
+                        node = {
+                            'name': name or f"Hysteria2-{server_port[0]}:{server_port[1]}",
+                            'type': 'hysteria2',
+                            'server': server_port[0],
+                            'port': int(server_port[1]),
+                            'password': password
+                        }
+                        
+                        # 解析参数
+                        if len(main_part) > 1:
+                            params = main_part[1].split('&')
+                            for param in params:
+                                if '=' in param:
+                                    key, value = param.split('=', 1)
+                                    from urllib.parse import unquote
+                                    value = unquote(value)
+                                    
+                                    if key == 'sni' or key == 'peer':
+                                        node['sni'] = value
+                                    elif key == 'insecure':
+                                        if value.lower() in ['true', '1', 'yes']:
+                                            node['skip-cert-verify'] = True
+                                    elif key == 'obfs':
+                                        if 'obfs' not in node:
+                                            node['obfs'] = {}
+                                        if value.startswith('salamander'):
+                                            # salamander:password
+                                            obfs_parts = value.split(':')
+                                            if len(obfs_parts) == 2:
+                                                node['obfs']['type'] = 'salamander'
+                                                node['obfs']['password'] = obfs_parts[1]
+                                    elif key == 'obfs-password':
+                                        if 'obfs' not in node:
+                                            node['obfs'] = {}
+                                        if 'type' not in node['obfs']:
+                                            node['obfs']['type'] = 'salamander'
+                                        node['obfs']['password'] = value
+                                    elif key == 'bandwidth' or key == 'up' or key == 'down':
+                                        # Hysteria2 带宽设置
+                                        if 'bandwidth' not in node:
+                                            node['bandwidth'] = {}
+                                        if key == 'up':
+                                            node['bandwidth']['up'] = value
+                                        elif key == 'down':
+                                            node['bandwidth']['down'] = value
+        except Exception as e:
+            pass
+    
     return node if node.get('server') else None
 
 def fetch_subscription(url, timeout=30):
@@ -247,7 +310,8 @@ def fetch_subscription(url, timeout=30):
             for line in lines:
                 line = line.strip()
                 if line and (line.startswith('ss://') or line.startswith('vmess://') or 
-                           line.startswith('trojan://') or line.startswith('vless://')):
+                           line.startswith('trojan://') or line.startswith('vless://') or
+                           line.startswith('hysteria2://') or line.startswith('hysteria://')):
                     node = parse_proxy_url(line)
                     if node:
                         nodes.append(node)
@@ -261,7 +325,8 @@ def fetch_subscription(url, timeout=30):
         for line in lines:
             line = line.strip()
             if line and (line.startswith('ss://') or line.startswith('vmess://') or 
-                       line.startswith('trojan://') or line.startswith('vless://')):
+                       line.startswith('trojan://') or line.startswith('vless://') or
+                       line.startswith('hysteria2://') or line.startswith('hysteria://')):
                 node = parse_proxy_url(line)
                 if node:
                     nodes.append(node)
@@ -306,11 +371,12 @@ def fetch_all_subscriptions(urls):
                     seen_identifiers.add(identifier)
                     
                     # 如果名称已存在，添加来源标记
-                    if node_name in seen_names:
+                    if node_name and node_name in seen_names:
                         node['name'] = f"{node_name} ({i})"
+                        node_name = node['name']  # 更新节点名称
                     
                     if node_name:
-                        seen_names.add(node.get('name', ''))
+                        seen_names.add(node_name)
                     
                     all_nodes.append(node)
                     added_count += 1
