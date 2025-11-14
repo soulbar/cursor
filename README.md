@@ -52,11 +52,10 @@ python main.py
 
 ## 下载配置文件
 
-在 [Releases](https://github.com/YOUR_USERNAME/YOUR_REPO/releases) 页面下载最新的 `clash-config.yaml` 文件。
+在 [Releases](https://github.com/soulbar/cursor/releases) 页面下载最新的 `clash-config.yaml` 文件。
 
 ## 注意事项
 
 - 测速功能需要网络连接
 - 某些节点可能需要特殊处理
 - 延迟测试使用TCP连接测试，可能因网络环境而异
-
