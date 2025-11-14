@@ -1,0 +1,99 @@
+name: 自动更新订阅配置
+
+on:
+  schedule:
+    # 每3小时运行一次
+    - cron: '0 */3 * * *'
+  workflow_dispatch:  # 允许手动触发
+  push:
+    branches:
+      - main
+    paths:
+      - '*.py'
+      - 'config.py'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 需要写入权限以创建Release
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 设置Python环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: 运行更新脚本
+        id: run_script
+        run: |
+          python main.py
+      
+      - name: 读取配置信息
+        id: config_info
+        run: |
+          python3 << EOF
+          import os
+          import yaml
+          with open('clash-config.yaml', 'r', encoding='utf-8') as f:
+              config = yaml.safe_load(f)
+              node_count = len(config.get('proxies', []))
+              output_file = os.environ.get('GITHUB_OUTPUT', '/dev/stdout')
+              with open(output_file, 'a') as out:
+                  out.write(f"node_count={node_count}\n")
+          EOF
+      
+      - name: 检查是否有更改
+        id: check_changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add clash-config.yaml
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "没有更改，跳过提交"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "检测到更改，将提交并创建Release"
+          fi
+      
+      - name: 提交更改
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "自动更新配置文件 [$(date '+%Y-%m-%d %H:%M:%S')]"
+          git push
+      
+      - name: 创建Release
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "v$(date +%Y%m%d-%H%M%S)"
+          name: "自动更新 - $(date '+%Y-%m-%d %H:%M:%S')"
+          body: |
+            ## 📦 订阅配置更新
+            
+            - **更新时间**: $(date '+%Y-%m-%d %H:%M:%S')
+            - **可用节点数**: ${{ steps.config_info.outputs.node_count }}
+            - **延迟阈值**: 500ms
+            
+            ### 📥 下载配置
+            
+            点击下方下载按钮下载 `clash-config.yaml` 文件，然后导入到你的Clash客户端即可使用。
+            
+            ### 🔄 自动更新
+            
+            此配置每3小时自动更新一次，确保节点始终可用。
+          files: clash-config.yaml
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

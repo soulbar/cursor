@@ -1,84 +1,104 @@
 # 部署说明
 
-## 部署到 GitHub
+## GitHub仓库部署步骤
 
-### 方法一：使用 GitHub CLI（推荐）
+### 1. 创建GitHub仓库
 
-1. 安装 GitHub CLI（如果还没有安装）：
-   ```bash
-   # Windows (使用 Chocolatey)
-   choco install gh
-   
-   # 或从 https://cli.github.com/ 下载安装
-   ```
+1. 登录GitHub，点击右上角的"+"号，选择"New repository"
+2. 填写仓库名称（例如：`clash-subscription-aggregator`）
+3. 选择Public或Private
+4. **不要**初始化README、.gitignore或license（我们已经创建了这些文件）
+5. 点击"Create repository"
 
-2. 登录 GitHub：
-   ```bash
-   gh auth login
-   ```
+### 2. 推送代码到GitHub
 
-3. 创建新仓库并推送代码：
-   ```bash
-   # 初始化 git（如果还没有）
-   git init
-   git add .
-   git commit -m "Initial commit: 免费节点自动爬取系统"
-   
-   # 创建 GitHub 仓库并推送
-   gh repo create free-nodes-crawler --public --source=. --remote=origin --push
-   ```
+在本地项目目录执行以下命令：
 
-### 方法二：手动创建仓库
+```bash
+# 初始化Git仓库（如果还没有初始化）
+git init
 
-1. 在 GitHub 上创建一个新仓库（例如：`free-nodes-crawler`）
+# 添加所有文件
+git add .
 
-2. 初始化并推送代码：
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: 免费节点自动爬取系统"
-   git branch -M main
-   git remote add origin https://github.com/你的用户名/free-nodes-crawler.git
-   git push -u origin main
-   ```
+# 提交代码
+git commit -m "Initial commit: 订阅节点汇聚工具"
 
-### 启用 GitHub Actions
+# 添加远程仓库（替换YOUR_USERNAME和YOUR_REPO为你的实际信息）
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
 
-1. 推送代码后，GitHub Actions 会自动启用
-2. 定时任务会在每 2 小时自动运行一次
-3. 你也可以在 GitHub 仓库的 Actions 标签页手动触发
+# 推送到GitHub
+git branch -M main
+git push -u origin main
+```
 
-### 查看运行结果
+### 3. 启用GitHub Actions
 
-- 在 GitHub 仓库的 Actions 标签页查看运行日志
-- 运行成功后，`nodes.txt`、`nodes.json` 和 `clash_config.yaml` 会自动更新
-- 查看 `log.txt` 了解详细运行日志
+1. 进入仓库设置（Settings）
+2. 点击左侧的"Actions" -> "General"
+3. 确保"Workflow permissions"设置为"Read and write permissions"
+4. 点击"Save"
+
+### 4. 手动触发首次运行
+
+1. 进入仓库的"Actions"标签页
+2. 点击左侧的"自动更新订阅配置"工作流
+3. 点击右上角的"Run workflow"按钮
+4. 选择main分支，点击"Run workflow"
+
+### 5. 检查运行结果
+
+1. 在Actions页面查看工作流运行状态
+2. 如果成功，会在"Releases"页面看到新的Release
+3. 可以在Release中下载`clash-config.yaml`文件
 
 ## 本地测试
 
-在部署前，建议先在本地测试：
+在推送到GitHub之前，可以在本地测试：
 
 ```bash
 # 安装依赖
 pip install -r requirements.txt
 
-# 运行程序
+# 运行脚本
 python main.py
 
-# 查看结果
-cat nodes.txt
-cat nodes.json
+# 检查生成的配置文件
+cat clash-config.yaml
 ```
+
+## 自定义配置
+
+如果需要修改配置，编辑`config.py`文件：
+
+- `SUBSCRIPTION_URLS`: 订阅链接列表
+- `MAX_LATENCY`: 最大延迟阈值（毫秒）
+- `RULES`: 分流规则配置
 
 ## 注意事项
 
-1. **GitHub API 限制**：GitHub API 有速率限制（未认证用户每小时 60 次请求）。如果需要爬取更多仓库，建议：
-   - 使用 GitHub Personal Access Token
-   - 在 GitHub Actions 的 Secrets 中添加 `GITHUB_TOKEN`
+1. 确保订阅链接可访问
+2. 某些节点可能需要特殊配置
+3. 测速结果可能因网络环境而异
+4. GitHub Actions的免费额度有限，注意使用频率
 
-2. **节点来源**：默认配置的仓库可能不存在或已更改，请在 `config.py` 中更新 `GITHUB_REPOS` 列表
+## 故障排除
 
-3. **代理测试**：由于 GitHub Actions 运行环境限制，某些代理测试可能无法完全执行。建议在本地环境进行完整测试
+### GitHub Actions失败
 
-4. **安全性**：请遵守相关法律法规，仅用于学习和测试目的
+1. 检查Actions日志，查看错误信息
+2. 确保所有依赖都已安装
+3. 检查订阅链接是否可访问
+
+### 没有节点被获取
+
+1. 检查订阅链接是否正确
+2. 某些链接可能需要特殊处理（如Cloudflare保护）
+3. 查看脚本输出的错误信息
+
+### 配置文件格式错误
+
+1. 确保生成的YAML格式正确
+2. 检查Clash配置语法
+3. 在Clash客户端中测试配置文件
 

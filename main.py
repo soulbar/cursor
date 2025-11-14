@@ -1,99 +1,76 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-主程序入口
+主执行脚本
 """
-import asyncio
-import logging
 import sys
+import os
 from datetime import datetime
-from config import GITHUB_REPOS, LOG_FILE
-from node_crawler import GitHubNodeCrawler
-from node_validator import NodeValidator
-from node_speedtest import NodeSpeedTest
-from node_storage import NodeStorage
+from fetch_subscriptions import fetch_all_subscriptions
+from test_nodes import test_nodes
+from generate_clash import generate_clash_config, save_clash_config
+from config import SUBSCRIPTION_URLS, MAX_LATENCY
 
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(LOG_FILE, encoding='utf-8'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-
-logger = logging.getLogger(__name__)
-
-
-async def main():
-    """主函数"""
-    logger.info("=" * 50)
-    logger.info("开始节点爬取和验证流程")
-    logger.info(f"时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info("=" * 50)
+def main():
+    print("=" * 60)
+    print("订阅节点汇聚工具")
+    print("=" * 60)
+    print(f"开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
+    # 1. 获取订阅节点
+    print("[1/3] 正在获取订阅节点...")
     try:
-        # 1. 爬取节点
-        logger.info("步骤 1: 开始爬取节点...")
-        crawler = GitHubNodeCrawler()
-        all_nodes = crawler.crawl_all(GITHUB_REPOS)
-        logger.info(f"共爬取到 {len(all_nodes)} 个节点")
-        
-        if not all_nodes:
-            logger.warning("未爬取到任何节点，请检查网络连接和仓库配置")
-            return
-        
-        # 2. 验证节点可用性
-        logger.info("步骤 2: 开始验证节点可用性...")
-        validator = NodeValidator()
-        valid_nodes = await validator.validate_nodes(all_nodes)
-        logger.info(f"验证完成，共 {len(valid_nodes)} 个可用节点")
-        
-        if not valid_nodes:
-            logger.warning("没有可用的节点")
-            return
-        
-        # 3. 测速
-        logger.info("步骤 3: 开始测速...")
-        speedtest = NodeSpeedTest()
-        speed_ok_nodes = await speedtest.test_nodes_speed(valid_nodes)
-        logger.info(f"测速完成，共 {len(speed_ok_nodes)} 个节点速度在范围内")
-        
-        if not speed_ok_nodes:
-            logger.warning("没有速度在范围内的节点")
-            return
-        
-        # 4. 保存结果
-        logger.info("步骤 4: 保存结果...")
-        NodeStorage.save_all(speed_ok_nodes)
-        
-        # 5. 统计信息
-        logger.info("=" * 50)
-        logger.info("爬取和验证完成！")
-        logger.info(f"总节点数: {len(all_nodes)}")
-        logger.info(f"可用节点数: {len(valid_nodes)}")
-        logger.info(f"速度合格节点数: {len(speed_ok_nodes)}")
-        
-        # 流媒体访问统计
-        streaming_stats = {}
-        for node in speed_ok_nodes:
-            if 'streaming_access' in node:
-                for site, accessible in node['streaming_access'].items():
-                    if site not in streaming_stats:
-                        streaming_stats[site] = 0
-                    if accessible:
-                        streaming_stats[site] += 1
-        
-        logger.info("流媒体访问统计:")
-        for site, count in streaming_stats.items():
-            logger.info(f"  {site}: {count} 个节点可访问")
-        
-        logger.info("=" * 50)
-        
+        nodes = fetch_all_subscriptions(SUBSCRIPTION_URLS)
+        if not nodes:
+            print("错误: 未获取到任何节点")
+            sys.exit(1)
+        print(f"✓ 成功获取 {len(nodes)} 个节点\n")
     except Exception as e:
-        logger.error(f"程序执行出错: {e}", exc_info=True)
-        raise
-
+        print(f"错误: 获取节点失败 - {str(e)}")
+        sys.exit(1)
+    
+    # 2. 测速并过滤
+    print(f"[2/3] 正在测试节点延迟（过滤延迟>{MAX_LATENCY}ms的节点）...")
+    try:
+        available_nodes = test_nodes(nodes, MAX_LATENCY)
+        if not available_nodes:
+            print("错误: 没有可用的节点（所有节点延迟都超过阈值）")
+            sys.exit(1)
+        print(f"✓ 测试完成，可用节点: {len(available_nodes)}/{len(nodes)}\n")
+    except Exception as e:
+        print(f"错误: 测速失败 - {str(e)}")
+        sys.exit(1)
+    
+    # 3. 生成Clash配置
+    print("[3/3] 正在生成Clash配置文件...")
+    try:
+        config = generate_clash_config(available_nodes)
+        
+        # 保存到本地文件
+        output_file = 'clash-config.yaml'
+        if save_clash_config(config, output_file):
+            print(f"✓ 配置文件已生成: {output_file}")
+            print(f"  - 包含 {len(available_nodes)} 个可用节点")
+            print(f"  - 包含 {len(config.get('rules', []))} 条分流规则")
+            print(f"  - 包含 {len(config.get('proxy-groups', []))} 个代理组")
+        else:
+            print("错误: 保存配置文件失败")
+            sys.exit(1)
+    except Exception as e:
+        print(f"错误: 生成配置失败 - {str(e)}")
+        sys.exit(1)
+    
+    print("\n" + "=" * 60)
+    print(f"完成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 60)
+    
+    # 如果是在GitHub Actions中运行，也保存到GITHUB_OUTPUT
+    if os.environ.get('GITHUB_ACTIONS'):
+        output_file_path = os.path.abspath(output_file)
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+            f.write(f"config_file={output_file_path}\n")
+            f.write(f"node_count={len(available_nodes)}\n")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
 
