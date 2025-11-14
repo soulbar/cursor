@@ -368,37 +368,52 @@ def sanitize_node_name(name):
         return name
     
     import re
-    # 移除控制字符和可能导致问题的字符
-    # 保留常见的中文、英文、数字、常用标点
-    # 移除可能导致编码问题的特殊字符
-    name = re.sub(r'[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f-\x9f]', '', name)  # 移除控制字符
     name = name.strip()
     
-    # 限制名称长度，避免过长
-    if len(name) > 100:
-        name = name[:100]
+    # 移除控制字符
+    name = re.sub(r'[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f-\x9f]', '', name)
     
-    return name
+    # 移除末尾已有的 "(数字)" 以免重复
+    name = re.sub(r'\s*\(\d+\)\s*$', '', name)
+    
+    # 仅保留常见字符：中英文字母、数字、常用符号，其他替换为空
+    allowed_pattern = r'[^0-9A-Za-z\u4e00-\u9fff\-\_\.\s\[\]\(\):/|]'
+    name = re.sub(allowed_pattern, '', name)
+    
+    # 合并连续空格
+    name = re.sub(r'\s+', ' ', name)
+    
+    # 限制长度
+    if len(name) > 80:
+        name = name[:80]
+    
+    return name or None
 
-def ensure_unique_name(name, seen_names, counter=1):
+def ensure_unique_name(name, seen_names, name_counters):
     """确保节点名称唯一"""
     if not name:
-        return None, counter
+        return None
     
-    original_name = name
-    while name in seen_names:
-        name = f"{original_name}-{counter}"
+    base_name = name
+    counter = name_counters.get(base_name, 0)
+    
+    unique_name = base_name if counter == 0 else f"{base_name}-{counter}"
+    counter += 1
+    
+    while unique_name in seen_names:
+        unique_name = f"{base_name}-{counter}"
         counter += 1
     
-    seen_names.add(name)
-    return name, counter
+    seen_names.add(unique_name)
+    name_counters[base_name] = counter
+    return unique_name
 
 def fetch_all_subscriptions(urls):
     """获取所有订阅链接的节点"""
     all_nodes = []
     seen_names = set()
     seen_identifiers = set()  # 用于去重：server:port:type:uuid的组合
-    name_counter = {}  # 用于跟踪每个基础名称的计数器
+    name_counters = {}  # 用于记录每个基础名称的计数
     
     for i, url in enumerate(urls, 1):
         print(f"\n[{i}/{len(urls)}] 正在获取订阅: {url}")
@@ -428,18 +443,14 @@ def fetch_all_subscriptions(urls):
                     node_name = f"{node_type}-{server}-{port}"
                 
                 # 确保名称唯一
-                unique_name, counter = ensure_unique_name(node_name, seen_names)
-                if unique_name:
-                    node['name'] = unique_name
-                    all_nodes.append(node)
-                    added_count += 1
-                else:
-                    # 如果还是无法生成唯一名称，使用标识符的一部分
+                unique_name = ensure_unique_name(node_name, seen_names, name_counters)
+                if not unique_name:
                     fallback_name = f"{node_type}-{server}-{port}-{uuid[:8] if uuid else i}"
-                    unique_name, _ = ensure_unique_name(fallback_name, seen_names)
-                    node['name'] = unique_name
-                    all_nodes.append(node)
-                    added_count += 1
+                    unique_name = ensure_unique_name(fallback_name, seen_names, name_counters)
+                
+                node['name'] = unique_name
+                all_nodes.append(node)
+                added_count += 1
             
             print(f"  ✓ 从该订阅添加了 {added_count} 个节点（去重后）")
         else:
