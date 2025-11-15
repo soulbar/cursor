@@ -517,11 +517,12 @@ def fetch_subscription(url, timeout=30):
         response = None
         try:
             response = requests.get(
-                url, 
-                headers=headers, 
-                timeout=timeout, 
+                url,
+                headers=headers,
+                timeout=timeout,
                 allow_redirects=True,
-                verify=False
+                verify=False,
+                proxies={"http": None, "https": None}
             )
             response.raise_for_status()
         except Exception as e:
@@ -532,14 +533,19 @@ def fetch_subscription(url, timeout=30):
                         'browser': 'chrome',
                         'platform': 'windows',
                         'desktop': True
-                    },
-                    verify=False
+                    }
                 )
+                # cloudscraper 在较新版本中不再支持 verify 参数，直接设置属性以跳过校验
+                try:
+                    scraper.verify = False
+                except Exception:
+                    pass
                 response = scraper.get(
-                    url, 
-                    headers=headers, 
-                    timeout=timeout, 
-                    allow_redirects=True
+                    url,
+                    headers=headers,
+                    timeout=timeout,
+                    allow_redirects=True,
+                    proxies={"http": None, "https": None}
                 )
                 response.raise_for_status()
             except Exception as e2:
