@@ -8,7 +8,7 @@ import re
 import requests
 import yaml
 import json
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qsl, unquote
 import cloudscraper
 import urllib3
 import ssl
@@ -29,10 +29,32 @@ def decode_base64(content):
     except:
         return None
 
+SUPPORTED_PROXY_PREFIXES = (
+    'ss://', 'vmess://', 'trojan://', 'vless://',
+    'hysteria2://', 'hysteria://', 'tuic://', 'wireguard://',
+    'http://', 'https://', 'socks://', 'socks5://'
+)
+
+
+def is_supported_proxy_url(line):
+    return any(line.startswith(prefix) for prefix in SUPPORTED_PROXY_PREFIXES)
+
+
 def parse_proxy_url(proxy_url):
     """解析代理URL（ss://, vmess://, trojan://, vless://等）"""
     node = {}
-    
+
+    def str_to_bool(value):
+        if value is None:
+            return False
+        return str(value).strip().lower() in ['1', 'true', 'yes', 'on']
+
+    def to_int(value):
+        try:
+            return int(str(value).strip())
+        except (TypeError, ValueError):
+            return None
+
     if proxy_url.startswith('vless://'):
         # VLESS格式: vless://uuid@server:port?params#name
         try:
@@ -60,7 +82,6 @@ def parse_proxy_url(proxy_url):
                             for param in params:
                                 if '=' in param:
                                     key, value = param.split('=', 1)
-                                    from urllib.parse import unquote
                                     value = unquote(value)
                                     
                                     if key == 'type':
@@ -215,7 +236,6 @@ def parse_proxy_url(proxy_url):
                             for param in params:
                                 if '=' in param:
                                     key, value = param.split('=', 1)
-                                    from urllib.parse import unquote
                                     value = unquote(value)
                                     
                                     if key == 'sni' or key == 'peer':
@@ -248,7 +268,242 @@ def parse_proxy_url(proxy_url):
                                             node['bandwidth']['down'] = value
         except Exception as e:
             pass
-    
+
+    elif proxy_url.startswith('tuic://'):
+        try:
+            parsed = urlparse(proxy_url)
+            params = {k.lower(): v for k, v in parse_qsl(parsed.query)}
+
+            server = parsed.hostname or params.get('server') or params.get('host')
+            if not server and params.get('endpoint'):
+                endpoint = params['endpoint']
+                if ':' in endpoint:
+                    server = endpoint.rsplit(':', 1)[0]
+
+            port = parsed.port
+            if port is None:
+                port_value = params.get('port')
+                if not port_value and params.get('endpoint') and ':' in params['endpoint']:
+                    port_value = params['endpoint'].rsplit(':', 1)[1]
+                port = to_int(port_value)
+
+            if server and port:
+                name = parsed.fragment or params.get('name') or f"TUIC-{server}:{port}"
+                node = {
+                    'name': name,
+                    'type': 'tuic',
+                    'server': server,
+                    'port': port
+                }
+
+                if parsed.username and parsed.password:
+                    node['uuid'] = parsed.username
+                    node['password'] = parsed.password
+                elif parsed.username and not parsed.password:
+                    node['password'] = parsed.username
+
+                if 'uuid' in params:
+                    node['uuid'] = params['uuid']
+                if 'password' in params:
+                    node['password'] = params['password']
+
+                sni = params.get('sni') or params.get('peer') or params.get('servername')
+                if sni:
+                    node['sni'] = sni
+
+                if 'alpn' in params:
+                    alpn_values = [item.strip() for item in params['alpn'].split(',') if item.strip()]
+                    if alpn_values:
+                        node['alpn'] = alpn_values
+
+                congestion = params.get('congestion-control') or params.get('congestion_control')
+                if congestion:
+                    node['congestion-control'] = congestion
+
+                udp_mode = params.get('udp-relay-mode') or params.get('udp_relay_mode')
+                if udp_mode:
+                    node['udp-relay-mode'] = udp_mode
+
+                heartbeat = params.get('heartbeat-interval') or params.get('heartbeat_interval')
+                heartbeat_value = to_int(heartbeat)
+                if heartbeat_value is not None:
+                    node['heartbeat-interval'] = heartbeat_value
+
+                if any(key in params for key in ['skip-cert-verify', 'allow-insecure', 'allow_insecure', 'insecure']):
+                    key = next(k for k in ['skip-cert-verify', 'allow-insecure', 'allow_insecure', 'insecure'] if k in params)
+                    if str_to_bool(params[key]):
+                        node['skip-cert-verify'] = True
+
+                if any(key in params for key in ['disable-sni', 'disable_sni']):
+                    key = 'disable-sni' if 'disable-sni' in params else 'disable_sni'
+                    if str_to_bool(params[key]):
+                        node['disable-sni'] = True
+
+                if any(key in params for key in ['zero-rtt-handshake', 'zero_rtt_handshake']):
+                    key = 'zero-rtt-handshake' if 'zero-rtt-handshake' in params else 'zero_rtt_handshake'
+                    if str_to_bool(params[key]):
+                        node['zero-rtt-handshake'] = True
+
+                if any(key in params for key in ['reduce-rtt', 'reduce_rtt']):
+                    key = 'reduce-rtt' if 'reduce-rtt' in params else 'reduce_rtt'
+                    if str_to_bool(params[key]):
+                        node['reduce-rtt'] = True
+        except Exception:
+            pass
+
+    elif proxy_url.startswith('wireguard://'):
+        try:
+            parsed = urlparse(proxy_url)
+            params = {k.lower(): v for k, v in parse_qsl(parsed.query)}
+
+            server = parsed.hostname or params.get('server') or params.get('host') or params.get('hostname')
+            if not server and params.get('endpoint'):
+                endpoint = params['endpoint']
+                if ':' in endpoint:
+                    server = endpoint.rsplit(':', 1)[0]
+
+            port = parsed.port
+            if port is None:
+                port_value = params.get('port')
+                if not port_value and params.get('endpoint') and ':' in params['endpoint']:
+                    port_value = params['endpoint'].rsplit(':', 1)[1]
+                port = to_int(port_value)
+
+            if server and port:
+                name = parsed.fragment or params.get('name') or f"WireGuard-{server}:{port}"
+                node = {
+                    'name': name,
+                    'type': 'wireguard',
+                    'server': server,
+                    'port': port
+                }
+
+                private_key = params.get('private-key') or params.get('private_key') or params.get('privatekey')
+                if private_key:
+                    node['private-key'] = private_key
+                elif parsed.username:
+                    node['private-key'] = parsed.username
+
+                pre_shared = params.get('pre-shared-key') or params.get('pre_shared_key') or params.get('presharedkey') or params.get('psk')
+                if pre_shared:
+                    node['pre-shared-key'] = pre_shared
+                elif parsed.password:
+                    node['pre-shared-key'] = parsed.password
+
+                public_key = params.get('public-key') or params.get('public_key') or params.get('publickey')
+                if public_key:
+                    node['public-key'] = public_key
+
+                ip = params.get('ip') or params.get('address') or params.get('local-address')
+                if ip:
+                    node['ip'] = ip
+
+                dns = params.get('dns') or params.get('dns-server') or params.get('dns_servers')
+                if dns:
+                    dns_values = [item.strip() for item in re.split(r'[;,]', dns) if item.strip()]
+                    if dns_values:
+                        node['dns'] = dns_values
+
+                mtu_value = to_int(params.get('mtu'))
+                if mtu_value is not None:
+                    node['mtu'] = mtu_value
+
+                keepalive_value = to_int(params.get('keepalive') or params.get('persistent-keepalive'))
+                if keepalive_value is not None:
+                    node['keepalive'] = keepalive_value
+
+                if 'reserved' in params:
+                    raw_reserved = params['reserved']
+                    reserved_values = []
+                    for item in re.split(r'[;,]', raw_reserved):
+                        item = item.strip()
+                        if not item:
+                            continue
+                        try:
+                            reserved_values.append(int(item, 0))
+                        except ValueError:
+                            try:
+                                reserved_values.append(int(item))
+                            except ValueError:
+                                pass
+                    if reserved_values:
+                        node['reserved'] = reserved_values
+
+                if any(key in params for key in ['udp', 'udp-relay', 'udp_relay']):
+                    key = next(k for k in ['udp', 'udp-relay', 'udp_relay'] if k in params)
+                    if str_to_bool(params[key]):
+                        node['udp'] = True
+
+                if params.get('sni') or params.get('servername'):
+                    node['servername'] = params.get('sni') or params.get('servername')
+        except Exception:
+            pass
+
+    elif proxy_url.startswith('http://') or proxy_url.startswith('https://'):
+        try:
+            parsed = urlparse(proxy_url)
+            server = parsed.hostname
+            port = parsed.port or (443 if proxy_url.startswith('https://') else 80)
+
+            if server and port:
+                scheme = 'HTTPS' if proxy_url.startswith('https://') else 'HTTP'
+                name = parsed.fragment or f"{scheme}-{server}:{port}"
+                node = {
+                    'name': name,
+                    'type': 'http',
+                    'server': server,
+                    'port': port
+                }
+
+                if parsed.username:
+                    node['username'] = parsed.username
+                if parsed.password:
+                    node['password'] = parsed.password
+
+                if proxy_url.startswith('https://'):
+                    node['tls'] = True
+
+                params = {k.lower(): v for k, v in parse_qsl(parsed.query)}
+
+                if any(key in params for key in ['skip-cert-verify', 'allow-insecure', 'allow_insecure', 'insecure']):
+                    key = next(k for k in ['skip-cert-verify', 'allow-insecure', 'allow_insecure', 'insecure'] if k in params)
+                    if str_to_bool(params[key]):
+                        node['skip-cert-verify'] = True
+
+                if params.get('sni') or params.get('servername'):
+                    node['servername'] = params.get('sni') or params.get('servername')
+        except Exception:
+            pass
+
+    elif proxy_url.startswith('socks://') or proxy_url.startswith('socks5://'):
+        try:
+            parsed = urlparse(proxy_url)
+            server = parsed.hostname
+            port = parsed.port or 1080
+
+            if server and port:
+                name = parsed.fragment or f"SOCKS5-{server}:{port}"
+                node = {
+                    'name': name,
+                    'type': 'socks5',
+                    'server': server,
+                    'port': port
+                }
+
+                if parsed.username:
+                    node['username'] = parsed.username
+                if parsed.password:
+                    node['password'] = parsed.password
+
+                params = {k.lower(): v for k, v in parse_qsl(parsed.query)}
+
+                if any(key in params for key in ['udp', 'udp-relay', 'udp_relay']):
+                    key = next(k for k in ['udp', 'udp-relay', 'udp_relay'] if k in params)
+                    if str_to_bool(params[key]):
+                        node['udp'] = True
+        except Exception:
+            pass
+
     return node if node.get('server') else None
 
 def fetch_subscription(url, timeout=30):
@@ -325,9 +580,7 @@ def fetch_subscription(url, timeout=30):
             nodes = []
             for line in lines:
                 line = line.strip()
-                if line and (line.startswith('ss://') or line.startswith('vmess://') or 
-                           line.startswith('trojan://') or line.startswith('vless://') or
-                           line.startswith('hysteria2://') or line.startswith('hysteria://')):
+                if line and is_supported_proxy_url(line):
                     node = parse_proxy_url(line)
                     if node:
                         nodes.append(node)
@@ -340,9 +593,7 @@ def fetch_subscription(url, timeout=30):
         nodes = []
         for line in lines:
             line = line.strip()
-            if line and (line.startswith('ss://') or line.startswith('vmess://') or 
-                       line.startswith('trojan://') or line.startswith('vless://') or
-                       line.startswith('hysteria2://') or line.startswith('hysteria://')):
+            if line and is_supported_proxy_url(line):
                 node = parse_proxy_url(line)
                 if node:
                     nodes.append(node)
